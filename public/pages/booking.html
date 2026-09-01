@@ -1,412 +1,412 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Doorstep Salon & Spa Look | ROCHELLE</title>
-  <meta name="description" content="Book certified master therapists for doorstep hair, skincare facials, Russian gel nails, and couture bridal glam. Instant time slot reservation.">
-  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Book Doorstep Salon & Spa Look | ROCHELLE</title>
+ <meta name="description" content="Book certified master therapists for doorstep hair, skincare facials, Russian gel nails, and couture bridal glam. Instant time slot reservation.">
+ <link rel="icon" type="image/png" href="../../assets/img/logo.png">
 
-  <!-- TailwindCSS CDN & Config -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../../src/js/tailwind.config.js"></script>
+ <!-- TailwindCSS CDN & Config -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script src="../../src/js/tailwind.config.js"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <!-- Font Awesome Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../../src/css/style.css">
+ <!-- Custom Styles -->
+ <link rel="stylesheet" href="../../src/css/style.css">
 </head>
 <body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
 
-  <div id="navbar-container"></div>
+ <div id="navbar-container"></div>
 
-  <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-    
-    <!-- WIZARD HEADER & STEPS INDICATOR -->
-    <div class="text-center space-y-4 max-w-2xl mx-auto">
-      <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#BD5579] bg-pink-100 dark:bg-pink-950/60 px-3.5 py-1.5 rounded-full">
-        RESERVE YOUR PRIVATE SANCTUARY
-      </span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
-        Book Your Doorstep Session
-      </h1>
-      <p class="text-xs sm:text-sm text-gray-500">
-        Choose your bespoke treatments, preferred master artist, and arrival time.
-      </p>
+ <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+ 
+ <!-- WIZARD HEADER & STEPS INDICATOR -->
+ <div class="text-center space-y-4 max-w-2xl mx-auto">
+ <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#BD5579] bg-pink-100 dark:bg-pink-950/60 px-3.5 py-1.5 rounded-full">
+ RESERVE YOUR PRIVATE SANCTUARY
+ </span>
+ <h1 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+ Book Your Doorstep Session
+ </h1>
+ <p class="text-xs sm:text-sm text-gray-500">
+ Choose your bespoke treatments, preferred master artist, and arrival time.
+ </p>
 
-      <!-- Stepper Indicator -->
-      <div class="flex items-center justify-between pt-6 max-w-xl mx-auto text-xs font-bold">
-        <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(1)">
-          <span id="step-indicator-1" class="w-8 h-8 rounded-full bg-[#BD5579] text-white flex items-center justify-center shadow">1</span>
-          <span class="text-[11px] text-gray-700 dark:text-gray-300">Services</span>
-        </div>
-        <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
+ <!-- Stepper Indicator -->
+ <div class="flex items-center justify-between pt-6 max-w-xl mx-auto text-xs font-bold">
+ <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(1)">
+ <span id="step-indicator-1" class="w-8 h-8 rounded-full bg-[#BD5579] text-white flex items-center justify-center shadow">1</span>
+ <span class="text-[11px] text-gray-700 dark:text-gray-300">Services</span>
+ </div>
+ <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
 
-        <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(2)">
-          <span id="step-indicator-2" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">2</span>
-          <span class="text-[11px] text-gray-700 dark:text-gray-300">Specialist</span>
-        </div>
-        <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
+ <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(2)">
+ <span id="step-indicator-2" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">2</span>
+ <span class="text-[11px] text-gray-700 dark:text-gray-300">Specialist</span>
+ </div>
+ <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
 
-        <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(3)">
-          <span id="step-indicator-3" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">3</span>
-          <span class="text-[11px] text-gray-700 dark:text-gray-300">Time</span>
-        </div>
-        <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
+ <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(3)">
+ <span id="step-indicator-3" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">3</span>
+ <span class="text-[11px] text-gray-700 dark:text-gray-300">Time</span>
+ </div>
+ <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
 
-        <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(4)">
-          <span id="step-indicator-4" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">4</span>
-          <span class="text-[11px] text-gray-700 dark:text-gray-300">Address</span>
-        </div>
-        <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
+ <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(4)">
+ <span id="step-indicator-4" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">4</span>
+ <span class="text-[11px] text-gray-700 dark:text-gray-300">Address</span>
+ </div>
+ <div class="flex-grow h-0.5 bg-gray-200 dark:bg-zinc-800 mx-2"></div>
 
-        <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(5)">
-          <span id="step-indicator-5" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">5</span>
-          <span class="text-[11px] text-gray-700 dark:text-gray-300">Confirm</span>
-        </div>
-      </div>
-    </div>
+ <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="window.setBookingStep(5)">
+ <span id="step-indicator-5" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 flex items-center justify-center">5</span>
+ <span class="text-[11px] text-gray-700 dark:text-gray-300">Confirm</span>
+ </div>
+ </div>
+ </div>
 
-    <!-- MAIN BOOKING GRID (LEFT: STEP PANELS, RIGHT: STICKY SUMMARY) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- LEFT COLUMN: STEP PANELS (8 COLS) -->
-      <div class="lg:col-span-8 bg-white dark:bg-[#1A1517] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-xl space-y-8">
-        
-        <!-- STEP 1: SELECT SERVICES -->
-        <div id="booking-step-1" class="space-y-6">
-          <div class="flex justify-between items-center border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <div>
-              <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 1: Choose Your Treatments</h2>
-              <p class="text-xs text-gray-500">Pick 2 items to get 15% off, or 3+ for 25% bundle savings.</p>
-            </div>
-            <span class="text-xs font-bold text-[#BD5579] bg-pink-50 dark:bg-zinc-800 px-3 py-1 rounded-full">
-              Single-Use Kits Included
-            </span>
-          </div>
+ <!-- MAIN BOOKING GRID (LEFT: STEP PANELS, RIGHT: STICKY SUMMARY) -->
+ <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+ 
+ <!-- LEFT COLUMN: STEP PANELS (8 COLS) -->
+ <div class="lg:col-span-8 bg-white dark:bg-[#1A1517] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-xl space-y-8">
+ 
+ <!-- STEP 1: SELECT SERVICES -->
+ <div id="booking-step-1" class="space-y-6">
+ <div class="flex justify-between items-center border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <div>
+ <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 1: Choose Your Treatments</h2>
+ <p class="text-xs text-gray-500">Pick 2 items to get 15% off, or 3+ for 25% bundle savings.</p>
+ </div>
+ <span class="text-xs font-bold text-[#BD5579] bg-pink-50 dark:bg-zinc-800 px-3 py-1 rounded-full">
+ Single-Use Kits Included
+ </span>
+ </div>
 
-          <!-- Services Choice Grid -->
-          <div class="space-y-3" id="booking-services-list">
-            <!-- Dynamically populated by booking.js -->
-          </div>
+ <!-- Services Choice Grid -->
+ <div class="space-y-3" id="booking-services-list">
+ <!-- Dynamically populated by booking.js -->
+ </div>
 
-          <div class="flex justify-end pt-4">
-            <button onclick="window.setBookingStep(2)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
-              <span>Next: Select Specialist</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+ <div class="flex justify-end pt-4">
+ <button onclick="window.setBookingStep(2)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
+ <span>Next: Select Specialist</span>
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+ </div>
 
-        <!-- STEP 2: CHOOSE SPECIALIST & PREFERENCES -->
-        <div id="booking-step-2" class="hidden space-y-6">
-          <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 2: Assign Master Artist & Preferences</h2>
-            <p class="text-xs text-gray-500">All artists are 100% background-checked and CIDESCO certified.</p>
-          </div>
+ <!-- STEP 2: CHOOSE SPECIALIST & PREFERENCES -->
+ <div id="booking-step-2" class="hidden space-y-6">
+ <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 2: Assign Master Artist & Preferences</h2>
+ <p class="text-xs text-gray-500">All artists are 100% background-checked and CIDESCO certified.</p>
+ </div>
 
-          <!-- Artist Radio Selection -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-[#BD5579] bg-pink-50/20 dark:bg-pink-950/20 cursor-pointer">
-              <input type="radio" name="booking-artist" value="any" checked class="accent-[#BD5579]">
-              <div>
-                <strong class="text-xs block text-gray-900 dark:text-white">First Available Top Specialist</strong>
-                <span class="text-[11px] text-gray-500">Fastest dispatch arrival (4.98+ Rating)</span>
-              </div>
-            </label>
+ <!-- Artist Radio Selection -->
+ <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+ <label class="flex items-center gap-3 p-4 rounded-2xl border-2 border-[#BD5579] bg-pink-50/20 dark:bg-pink-950/20 cursor-pointer">
+ <input type="radio" name="booking-artist" value="any" checked class="accent-[#BD5579]">
+ <div>
+ <strong class="text-xs block text-gray-900 dark:text-white">First Available Top Specialist</strong>
+ <span class="text-[11px] text-gray-500">Fastest dispatch arrival (4.98+ Rating)</span>
+ </div>
+ </label>
 
-            <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
-              <input type="radio" name="booking-artist" value="Sophia Vance" class="accent-[#BD5579]">
-              <img src="../../assets/img/expert.jpg" class="w-9 h-9 rounded-full object-cover">
-              <div>
-                <strong class="text-xs block text-gray-900 dark:text-white">Sophia Vance</strong>
-                <span class="text-[11px] text-gray-500">Facials & Moroccan Hair (4.99 ★)</span>
-              </div>
-            </label>
+ <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
+ <input type="radio" name="booking-artist" value="Sophia Vance" class="accent-[#BD5579]">
+ <img src="../../assets/img/expert.jpg" class="w-9 h-9 rounded-full object-cover">
+ <div>
+ <strong class="text-xs block text-gray-900 dark:text-white">Sophia Vance</strong>
+ <span class="text-[11px] text-gray-500">Facials & Moroccan Hair (4.99 )</span>
+ </div>
+ </label>
 
-            <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
-              <input type="radio" name="booking-artist" value="Clara Moreau" class="accent-[#BD5579]">
-              <img src="../../assets/img/hero.jpg" class="w-9 h-9 rounded-full object-cover">
-              <div>
-                <strong class="text-xs block text-gray-900 dark:text-white">Clara Moreau</strong>
-                <span class="text-[11px] text-gray-500">Keratin Smoothing & Cuts (4.98 ★)</span>
-              </div>
-            </label>
+ <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
+ <input type="radio" name="booking-artist" value="Clara Moreau" class="accent-[#BD5579]">
+ <img src="../../assets/img/hero.jpg" class="w-9 h-9 rounded-full object-cover">
+ <div>
+ <strong class="text-xs block text-gray-900 dark:text-white">Clara Moreau</strong>
+ <span class="text-[11px] text-gray-500">Keratin Smoothing & Cuts (4.98 )</span>
+ </div>
+ </label>
 
-            <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
-              <input type="radio" name="booking-artist" value="Nadia Al-Mansoor" class="accent-[#BD5579]">
-              <img src="../../assets/img/bridal.jpg" class="w-9 h-9 rounded-full object-cover">
-              <div>
-                <strong class="text-xs block text-gray-900 dark:text-white">Nadia Al-Mansoor</strong>
-                <span class="text-[11px] text-gray-500">Bridal Airbrush & Nails (5.0 ★)</span>
-              </div>
-            </label>
-          </div>
+ <label class="flex items-center gap-3 p-4 rounded-2xl border border-gray-200 dark:border-zinc-700 cursor-pointer hover:border-[#BD5579] transition">
+ <input type="radio" name="booking-artist" value="Nadia Al-Mansoor" class="accent-[#BD5579]">
+ <img src="../../assets/img/bridal.jpg" class="w-9 h-9 rounded-full object-cover">
+ <div>
+ <strong class="text-xs block text-gray-900 dark:text-white">Nadia Al-Mansoor</strong>
+ <span class="text-[11px] text-gray-500">Bridal Airbrush & Nails (5.0 )</span>
+ </div>
+ </label>
+ </div>
 
-          <!-- In-Home Comfort Preferences -->
-          <div class="space-y-3 pt-2">
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Home Comfort Customizations</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
-                <input type="checkbox" class="accent-[#BD5579]">
-                <span>🐾 Pet-Friendly Visit</span>
-              </label>
-              <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
-                <input type="checkbox" class="accent-[#BD5579]">
-                <span>🤫 Silent Zen Session</span>
-              </label>
-              <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
-                <input type="checkbox" checked class="accent-[#BD5579]">
-                <span>💡 Studio Ring Light</span>
-              </label>
-            </div>
-          </div>
+ <!-- In-Home Comfort Preferences -->
+ <div class="space-y-3 pt-2">
+ <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Home Comfort Customizations</h4>
+ <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+ <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
+ <input type="checkbox" class="accent-[#BD5579]">
+ <span> Pet-Friendly Visit</span>
+ </label>
+ <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
+ <input type="checkbox" class="accent-[#BD5579]">
+ <span> Silent Zen Session</span>
+ </label>
+ <label class="flex items-center gap-2 p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-semibold cursor-pointer">
+ <input type="checkbox" checked class="accent-[#BD5579]">
+ <span> Studio Ring Light</span>
+ </label>
+ </div>
+ </div>
 
-          <div class="flex justify-between pt-4">
-            <button onclick="window.setBookingStep(1)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
-              ← Back
-            </button>
-            <button onclick="window.setBookingStep(3)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
-              <span>Next: Select Date & Time</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+ <div class="flex justify-between pt-4">
+ <button onclick="window.setBookingStep(1)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
+ ← Back
+ </button>
+ <button onclick="window.setBookingStep(3)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
+ <span>Next: Select Date & Time</span>
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+ </div>
 
-        <!-- STEP 3: DATE & TIME SLOTS -->
-        <div id="booking-step-3" class="hidden space-y-6">
-          <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 3: Select Arrival Date & Slot</h2>
-            <p class="text-xs text-gray-500">Therapists arrive within a 15-minute guaranteed window.</p>
-          </div>
+ <!-- STEP 3: DATE & TIME SLOTS -->
+ <div id="booking-step-3" class="hidden space-y-6">
+ <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 3: Select Arrival Date & Slot</h2>
+ <p class="text-xs text-gray-500">Therapists arrive within a 15-minute guaranteed window.</p>
+ </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-2">Select Date</label>
-              <input type="date" id="booking-date-input" class="w-full p-4 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs sm:text-sm font-bold focus:outline-none focus:border-[#BD5579]">
-            </div>
+ <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+ <div>
+ <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-2">Select Date</label>
+ <input type="date" id="booking-date-input" class="w-full p-4 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs sm:text-sm font-bold focus:outline-none focus:border-[#BD5579]">
+ </div>
 
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-2">Select Time Window</label>
-              <div class="space-y-2">
-                <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
-                  <div class="flex items-center gap-2">
-                    <input type="radio" name="booking-timeslot" value="10:00 AM - 11:30 AM" checked class="accent-[#BD5579]">
-                    <span class="font-bold text-gray-900 dark:text-white">Morning: 10:00 AM</span>
-                  </div>
-                  <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
-                </label>
+ <div>
+ <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-2">Select Time Window</label>
+ <div class="space-y-2">
+ <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
+ <div class="flex items-center gap-2">
+ <input type="radio" name="booking-timeslot" value="10:00 AM - 11:30 AM" checked class="accent-[#BD5579]">
+ <span class="font-bold text-gray-900 dark:text-white">Morning: 10:00 AM</span>
+ </div>
+ <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
+ </label>
 
-                <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
-                  <div class="flex items-center gap-2">
-                    <input type="radio" name="booking-timeslot" value="02:00 PM - 03:30 PM" class="accent-[#BD5579]">
-                    <span class="font-bold text-gray-900 dark:text-white">Afternoon: 02:00 PM</span>
-                  </div>
-                  <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
-                </label>
+ <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
+ <div class="flex items-center gap-2">
+ <input type="radio" name="booking-timeslot" value="02:00 PM - 03:30 PM" class="accent-[#BD5579]">
+ <span class="font-bold text-gray-900 dark:text-white">Afternoon: 02:00 PM</span>
+ </div>
+ <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
+ </label>
 
-                <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
-                  <div class="flex items-center gap-2">
-                    <input type="radio" name="booking-timeslot" value="05:30 PM - 07:00 PM" class="accent-[#BD5579]">
-                    <span class="font-bold text-gray-900 dark:text-white">Evening: 05:30 PM</span>
-                  </div>
-                  <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
-                </label>
-              </div>
-            </div>
-          </div>
+ <label class="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 dark:border-zinc-700 hover:border-[#BD5579] cursor-pointer text-xs">
+ <div class="flex items-center gap-2">
+ <input type="radio" name="booking-timeslot" value="05:30 PM - 07:00 PM" class="accent-[#BD5579]">
+ <span class="font-bold text-gray-900 dark:text-white">Evening: 05:30 PM</span>
+ </div>
+ <span class="text-[10px] text-emerald-600 font-bold">● Available</span>
+ </label>
+ </div>
+ </div>
+ </div>
 
-          <div class="flex justify-between pt-4">
-            <button onclick="window.setBookingStep(2)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
-              ← Back
-            </button>
-            <button onclick="window.setBookingStep(4)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
-              <span>Next: Doorstep Address</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+ <div class="flex justify-between pt-4">
+ <button onclick="window.setBookingStep(2)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
+ ← Back
+ </button>
+ <button onclick="window.setBookingStep(4)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
+ <span>Next: Doorstep Address</span>
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+ </div>
 
-        <!-- STEP 4: ADDRESS & ENTRY INSTRUCTIONS -->
-        <div id="booking-step-4" class="hidden space-y-6">
-          <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 4: Doorstep Destination</h2>
-            <p class="text-xs text-gray-500">Your address is 256-bit encrypted and only shared with your artist upon dispatch.</p>
-          </div>
+ <!-- STEP 4: ADDRESS & ENTRY INSTRUCTIONS -->
+ <div id="booking-step-4" class="hidden space-y-6">
+ <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 4: Doorstep Destination</h2>
+ <p class="text-xs text-gray-500">Your address is 256-bit encrypted and only shared with your artist upon dispatch.</p>
+ </div>
 
-          <div class="space-y-4 text-xs">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Your Full Name *</label>
-                <input type="text" id="booking-name-input" required value="Clara Moreau" placeholder="e.g. Clara Moreau" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
-              </div>
-              <div>
-                <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Mobile Contact Phone *</label>
-                <input type="tel" id="booking-phone-input" required value="+1 (310) 555-LUXE" placeholder="e.g. +1 310-555-0199" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
-              </div>
-            </div>
+ <div class="space-y-4 text-xs">
+ <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Your Full Name *</label>
+ <input type="text" id="booking-name-input" required value="Clara Moreau" placeholder="e.g. Clara Moreau" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+ </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Mobile Contact Phone *</label>
+ <input type="tel" id="booking-phone-input" required value="+1 (310) 555-LUXE" placeholder="e.g. +1 310-555-0199" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+ </div>
+ </div>
 
-            <div>
-              <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Doorstep Address (Street, Apt/Villa, City, Zipcode) *</label>
-              <input type="text" id="booking-address-input" required value="1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210" placeholder="e.g. 1200 Sunset Blvd, Apt 4" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
-            </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Doorstep Address (Street, Apt/Villa, City, Zipcode) *</label>
+ <input type="text" id="booking-address-input" required value="1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210" placeholder="e.g. 1200 Sunset Blvd, Apt 4" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+ </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Gate / Entry Buzzer Code (Optional)</label>
-                <input type="text" id="booking-gate-input" value="#4821" placeholder="e.g. #4821" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
-              </div>
-              <div>
-                <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Parking / Arrival Note (Optional)</label>
-                <input type="text" id="booking-notes-input" placeholder="e.g. Guest parking in front driveway" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
-              </div>
-            </div>
-          </div>
+ <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Gate / Entry Buzzer Code (Optional)</label>
+ <input type="text" id="booking-gate-input" value="#4821" placeholder="e.g. #4821" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+ </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Parking / Arrival Note (Optional)</label>
+ <input type="text" id="booking-notes-input" placeholder="e.g. Guest parking in front driveway" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+ </div>
+ </div>
+ </div>
 
-          <div class="flex justify-between pt-4">
-            <button onclick="window.setBookingStep(3)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
-              ← Back
-            </button>
-            <button onclick="window.setBookingStep(5)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
-              <span>Next: Final Review</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+ <div class="flex justify-between pt-4">
+ <button onclick="window.setBookingStep(3)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
+ ← Back
+ </button>
+ <button onclick="window.setBookingStep(5)" class="bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow flex items-center gap-2">
+ <span>Next: Final Review</span>
+ <i class="fa-solid fa-arrow-right"></i>
+ </button>
+ </div>
+ </div>
 
-        <!-- STEP 5: REVIEW & INSTANT CONFIRMATION -->
-        <div id="booking-step-5" class="hidden space-y-6">
-          <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 5: Review & Confirm Appointment</h2>
-            <p class="text-xs text-gray-500">Zero cancellation fees up to 2 hours prior. Free doorstep travel.</p>
-          </div>
+ <!-- STEP 5: REVIEW & INSTANT CONFIRMATION -->
+ <div id="booking-step-5" class="hidden space-y-6">
+ <div class="border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Step 5: Review & Confirm Appointment</h2>
+ <p class="text-xs text-gray-500">Zero cancellation fees up to 2 hours prior. Free doorstep travel.</p>
+ </div>
 
-          <div id="booking-review-details" class="space-y-4">
-            <!-- Populated dynamically by booking.js -->
-          </div>
+ <div id="booking-review-details" class="space-y-4">
+ <!-- Populated dynamically by booking.js -->
+ </div>
 
-          <div class="flex justify-between items-center pt-6 border-t border-gray-100 dark:border-zinc-800 flex-wrap gap-4">
-            <button onclick="window.setBookingStep(4)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
-              ← Edit Details
-            </button>
-            <button onclick="window.finalizeDoorstepBooking()" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition shadow-2xl flex items-center gap-2">
-              <i class="fa-solid fa-sparkles"></i>
-              <span>Confirm & Dispatch Beautician</span>
-            </button>
-          </div>
-        </div>
-      </div>
+ <div class="flex justify-between items-center pt-6 border-t border-gray-100 dark:border-zinc-800 flex-wrap gap-4">
+ <button onclick="window.setBookingStep(4)" class="px-6 py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200">
+ ← Edit Details
+ </button>
+ <button onclick="window.finalizeDoorstepBooking()" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition shadow-2xl flex items-center gap-2">
+ <i class="fa-solid fa-sparkles"></i>
+ <span>Confirm & Dispatch Beautician</span>
+ </button>
+ </div>
+ </div>
+ </div>
 
-      <!-- RIGHT COLUMN: STICKY ORDER SUMMARY (4 COLS) -->
-      <div class="lg:col-span-4 space-y-6">
-        <div class="sticky top-24 bg-white dark:bg-[#1A1517] p-6 sm:p-7 rounded-3xl border-2 border-[#BD5579] shadow-2xl space-y-6">
-          
-          <div class="flex justify-between items-center border-b border-gray-100 dark:border-zinc-800 pb-4">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">APPOINTMENT SUMMARY</span>
-              <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Your Doorstep Bag</h3>
-            </div>
-            <i class="fa-solid fa-bag-shopping text-xl text-[#BD5579]"></i>
-          </div>
+ <!-- RIGHT COLUMN: STICKY ORDER SUMMARY (4 COLS) -->
+ <div class="lg:col-span-4 space-y-6">
+ <div class="sticky top-24 bg-white dark:bg-[#1A1517] p-6 sm:p-7 rounded-3xl border-2 border-[#BD5579] shadow-2xl space-y-6">
+ 
+ <div class="flex justify-between items-center border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <div>
+ <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">APPOINTMENT SUMMARY</span>
+ <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Your Doorstep Bag</h3>
+ </div>
+ <i class="fa-solid fa-bag-shopping text-xl text-[#BD5579]"></i>
+ </div>
 
-          <!-- Dynamic List of Selected Services -->
-          <div id="booking-summary-items" class="space-y-2">
-            <!-- Injected by booking.js -->
-          </div>
+ <!-- Dynamic List of Selected Services -->
+ <div id="booking-summary-items" class="space-y-2">
+ <!-- Injected by booking.js -->
+ </div>
 
-          <!-- Promo Code Input -->
-          <div class="space-y-2 pt-2">
-            <label class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Promo / Gift Voucher</label>
-            <div class="flex gap-2">
-              <input type="text" id="booking-promo-input" placeholder="e.g. GLOW20" value="GLOW20" class="w-full px-3 py-2.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs uppercase font-bold focus:outline-none focus:border-[#BD5579]">
-              <button onclick="window.applyPromoCode()" class="px-4 py-2.5 rounded-xl bg-[#141010] dark:bg-white text-white dark:text-[#141010] text-xs font-bold hover:bg-[#BD5579] transition">
-                Apply
-              </button>
-            </div>
-          </div>
+ <!-- Promo Code Input -->
+ <div class="space-y-2 pt-2">
+ <label class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Promo / Gift Voucher</label>
+ <div class="flex gap-2">
+ <input type="text" id="booking-promo-input" placeholder="e.g. GLOW20" value="GLOW20" class="w-full px-3 py-2.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs uppercase font-bold focus:outline-none focus:border-[#BD5579]">
+ <button onclick="window.applyPromoCode()" class="px-4 py-2.5 rounded-xl bg-[#141010] dark:bg-white text-white dark:text-[#141010] text-xs font-bold hover:bg-[#BD5579] transition">
+ Apply
+ </button>
+ </div>
+ </div>
 
-          <!-- Cost Calculation -->
-          <div class="space-y-2 pt-4 border-t border-gray-100 dark:border-zinc-800 text-xs">
-            <div class="flex justify-between text-gray-500">
-              <span>Estimated Duration</span>
-              <span class="font-bold text-gray-900 dark:text-white" id="booking-total-duration">0 mins</span>
-            </div>
-            <div class="flex justify-between text-gray-500">
-              <span>Subtotal</span>
-              <span class="font-bold text-gray-900 dark:text-white" id="booking-subtotal-price">$0</span>
-            </div>
-            <div class="flex justify-between text-emerald-600 hidden" id="booking-discount-row">
-              <span class="font-bold">VIP Discount</span>
-              <span class="font-bold" id="booking-discount-amount">-$0</span>
-            </div>
-            <div class="flex justify-between text-gray-500">
-              <span>Doorstep Travel & Sterile Kit</span>
-              <span class="font-bold text-emerald-600 uppercase">FREE</span>
-            </div>
-            
-            <div class="flex justify-between items-baseline pt-4 border-t border-gray-200 dark:border-zinc-800 text-base">
-              <span class="font-bold text-gray-900 dark:text-white">Total Amount</span>
-              <span class="font-sans-clean text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight" id="booking-total-price">$0</span>
-            </div>
-          </div>
+ <!-- Cost Calculation -->
+ <div class="space-y-2 pt-4 border-t border-gray-100 dark:border-zinc-800 text-xs">
+ <div class="flex justify-between text-gray-500">
+ <span>Estimated Duration</span>
+ <span class="font-bold text-gray-900 dark:text-white" id="booking-total-duration">0 mins</span>
+ </div>
+ <div class="flex justify-between text-gray-500">
+ <span>Subtotal</span>
+ <span class="font-bold text-gray-900 dark:text-white" id="booking-subtotal-price">$0</span>
+ </div>
+ <div class="flex justify-between text-emerald-600 hidden" id="booking-discount-row">
+ <span class="font-bold">VIP Discount</span>
+ <span class="font-bold" id="booking-discount-amount">-$0</span>
+ </div>
+ <div class="flex justify-between text-gray-500">
+ <span>Doorstep Travel & Sterile Kit</span>
+ <span class="font-bold text-emerald-600 uppercase">FREE</span>
+ </div>
+ 
+ <div class="flex justify-between items-baseline pt-4 border-t border-gray-200 dark:border-zinc-800 text-base">
+ <span class="font-bold text-gray-900 dark:text-white">Total Amount</span>
+ <span class="font-sans-clean text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight" id="booking-total-price">$0</span>
+ </div>
+ </div>
 
-          <!-- Safe-Salon Pledge -->
-          <div class="p-3.5 rounded-xl bg-pink-50 dark:bg-zinc-800/40 border border-pink-100 dark:border-zinc-700/60 space-y-1 text-[11px] text-gray-600 dark:text-gray-300">
-            <div class="flex items-center gap-1.5 font-bold text-[#BD5579]">
-              <i class="fa-solid fa-shield-check"></i> Safe-Salon™ Guarantee
-            </div>
-            <p>100% police background vetted specialist, hospital autoclave instruments, and zero cleanup mess.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+ <!-- Safe-Salon Pledge -->
+ <div class="p-3.5 rounded-xl bg-pink-50 dark:bg-zinc-800/40 border border-pink-100 dark:border-zinc-700/60 space-y-1 text-[11px] text-gray-600 dark:text-gray-300">
+ <div class="flex items-center gap-1.5 font-bold text-[#BD5579]">
+ <i class="fa-solid fa-shield-check"></i> Safe-Salon™ Guarantee
+ </div>
+ <p>100% police background vetted specialist, hospital autoclave instruments, and zero cleanup mess.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </main>
 
-  <!-- BOOKING CONFIRMATION MODAL -->
-  <div id="booking-confirmed-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-8 sm:p-10 max-w-md w-full text-center space-y-6 border border-gray-200 dark:border-zinc-800 shadow-2xl">
-      <div class="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-4xl mx-auto shadow-inner animate-bounce">
-        <i class="fa-solid fa-circle-check"></i>
-      </div>
+ <!-- BOOKING CONFIRMATION MODAL -->
+ <div id="booking-confirmed-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+ <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-8 sm:p-10 max-w-md w-full text-center space-y-6 border border-gray-200 dark:border-zinc-800 shadow-2xl">
+ <div class="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-4xl mx-auto shadow-inner animate-bounce">
+ <i class="fa-solid fa-circle-check"></i>
+ </div>
 
-      <div class="space-y-2">
-        <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">BOOKING CONFIRMED #LX-9428</span>
-        <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Your Master Artist Is Assigned!</h3>
-        <p class="text-xs text-gray-500 leading-relaxed">
-          Sophia Vance has received your appointment. A sealed monodose kit is packed and vehicle tracking is live.
-        </p>
-      </div>
+ <div class="space-y-2">
+ <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">BOOKING CONFIRMED #LX-9428</span>
+ <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Your Master Artist Is Assigned!</h3>
+ <p class="text-xs text-gray-500 leading-relaxed">
+ Sophia Vance has received your appointment. A sealed monodose kit is packed and vehicle tracking is live.
+ </p>
+ </div>
 
-      <div class="p-4 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800 text-left text-xs space-y-1">
-        <div class="flex justify-between"><strong class="text-gray-400">Date & Slot:</strong> <span class="font-bold text-gray-900 dark:text-white">Today • 02:00 PM</span></div>
-        <div class="flex justify-between"><strong class="text-gray-400">Doorstep:</strong> <span class="font-bold text-gray-900 dark:text-white">1200 Sunset Blvd, Villa 4</span></div>
-      </div>
+ <div class="p-4 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800 text-left text-xs space-y-1">
+ <div class="flex justify-between"><strong class="text-gray-400">Date & Slot:</strong> <span class="font-bold text-gray-900 dark:text-white">Today • 02:00 PM</span></div>
+ <div class="flex justify-between"><strong class="text-gray-400">Doorstep:</strong> <span class="font-bold text-gray-900 dark:text-white">1200 Sunset Blvd, Villa 4</span></div>
+ </div>
 
-      <div class="flex flex-col gap-2 pt-2">
-        <a href="../../auth/user/user-dashboard.html" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
-          <i class="fa-solid fa-location-crosshairs"></i>
-          <span>Track Beautician Live on GPS</span>
-        </a>
-        <a href="../../index.html" class="w-full py-3 rounded-full text-xs font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition">
-          Return to Home
-        </a>
-      </div>
-    </div>
-  </div>
+ <div class="flex flex-col gap-2 pt-2">
+ <a href="../../auth/user/user-dashboard.html" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+ <i class="fa-solid fa-location-crosshairs"></i>
+ <span>Track Beautician Live on GPS</span>
+ </a>
+ <a href="../../index.html" class="w-full py-3 rounded-full text-xs font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition">
+ Return to Home
+ </a>
+ </div>
+ </div>
+ </div>
 
-  <div id="footer-container"></div>
+ <div id="footer-container"></div>
 
-  <script src="../../src/js/theme.js"></script>
-  <script src="../../src/js/data.js"></script>
-  <script src="../../src/js/navbar.js"></script>
-  <script src="../../src/js/footer.js"></script>
-  <script src="../../src/js/booking.js"></script>
-  <script src="../../src/js/form-validation.js"></script>
+ <script src="../../src/js/theme.js"></script>
+ <script src="../../src/js/data.js"></script>
+ <script src="../../src/js/navbar.js"></script>
+ <script src="../../src/js/footer.js"></script>
+ <script src="../../src/js/booking.js"></script>
+ <script src="../../src/js/form-validation.js"></script>
 </body>
 </html>

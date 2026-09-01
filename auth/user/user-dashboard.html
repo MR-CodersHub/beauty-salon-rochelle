@@ -1,325 +1,345 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Portal & Live Tracker | ROCHELLE Doorstep Salon</title>
-  <meta name="description" content="Browse beauty services, book home visits, live track beautician arrival ETA, rate completed treatments, view history, and download official invoices.">
-  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Client Portal & Live Tracker | ROCHELLE Doorstep Salon</title>
+ <meta name="description" content="Browse beauty services, book home visits, live track beautician arrival ETA, rate completed treatments, view history, and download official invoices.">
+ <link rel="icon" type="image/png" href="../../assets/img/logo.png">
 
-  <!-- TailwindCSS CDN & Config -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../../src/js/tailwind.config.js"></script>
+ <!-- TailwindCSS CDN & Config -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script src="../../src/js/tailwind.config.js"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../../src/css/style.css">
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="../../src/css/style.css">
 
-  <style>
-    @media print {
-      body * {
-        visibility: hidden;
-      }
-      #printable-invoice-sheet, #printable-invoice-sheet * {
-        visibility: visible;
-      }
-      #printable-invoice-sheet {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-    }
-  </style>
+ <style>
+ @media print {
+ body * {
+ visibility: hidden;
+ }
+ #printable-invoice-sheet, #printable-invoice-sheet * {
+ visibility: visible;
+ }
+ #printable-invoice-sheet {
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ }
+ }
+ </style>
 </head>
 <body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
 
-  <div id="navbar-container"></div>
-
-  <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-    
-    <!-- 1. USER GREETING & GLOW REWARDS HEADER -->
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-[#1A1517] p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm">
-      <div class="flex items-center gap-4">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#BD5579] to-pink-300 text-white font-serif-luxury text-2xl font-bold flex items-center justify-center shadow-md flex-shrink-0">
-          C
+  <!-- Dashboard Top Bar with Brand & Logout -->
+  <header class="bg-white/95 dark:bg-[#141012]/95 backdrop-blur-md border-b border-gray-200 dark:border-zinc-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="../../index.html" class="flex items-center gap-3 group">
+        <img src="../../assets/img/logo.png" alt="ROCHELLE Logo" class="h-9 w-auto object-contain transition-transform group-hover:scale-105">
+        <div class="flex flex-col">
+          <span class="font-serif-luxury text-2xl font-bold tracking-widest text-[#141010] dark:text-white leading-none group-hover:text-[#BD5579] transition">ROCHELLE</span>
+          <span class="text-[8px] uppercase tracking-[0.25em] text-[#BD5579] font-bold mt-0.5">Client Sanctuary Dashboard</span>
         </div>
-        <div>
-          <div class="flex items-center gap-2 flex-wrap">
-            <h1 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Welcome, Clara Moreau</h1>
-            <span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">
-              👑 Gold VIP Member
-            </span>
-          </div>
-          <p class="text-xs text-gray-500 mt-0.5">Primary Sanctuary: <strong>1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210</strong></p>
-        </div>
-      </div>
+      </a>
 
-      <div class="flex items-center gap-4 flex-wrap">
-        <div class="p-4 rounded-2xl bg-pink-50 dark:bg-zinc-800/80 border border-pink-100 dark:border-zinc-700 text-center min-w-[130px]">
-          <span class="text-[10px] uppercase font-bold text-gray-400 block">Glow Points</span>
-          <span class="font-sans-clean text-2xl font-extrabold text-[#BD5579] tracking-tight" id="user-points-display">350 PTS</span>
-          <span class="text-[10px] text-emerald-600 block font-semibold">$35 credit available</span>
-        </div>
-
-        <button onclick="window.openBookingModal('hydra-facial')" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-6 py-4 rounded-2xl text-xs font-bold uppercase tracking-wider transition shadow-lg flex items-center gap-2">
-          <i class="fa-solid fa-calendar-plus"></i>
-          <span>Book Home Visit</span>
-        </button>
+      <!-- Right Navigation & Logout -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="../../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gray-100 dark:bg-zinc-800 text-xs font-bold text-gray-700 dark:text-gray-200 hover:text-[#BD5579] transition">
+          <i class="fa-solid fa-house text-xs"></i>
+          <span>Home</span>
+        </a>
+        <a href="../../public/auth/login.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-200 dark:border-rose-900/60 bg-rose-50/50 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-600 dark:hover:text-white text-xs font-bold transition shadow-sm">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Log Out</span>
+        </a>
       </div>
     </div>
+  </header>
 
-    <!-- 2. LIVE BEAUTICIAN ARRIVAL GPS TRACKER & ETA (INJECTED BY user-dashboard.js) -->
-    <div id="user-live-tracker-box">
-      <!-- Live SVG GPS Map, ETA countdown, Beautician details, Progress Steps -->
-    </div>
+ <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+ 
+ <!-- 1. USER GREETING & GLOW REWARDS HEADER -->
+ <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-[#1A1517] p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm">
+ <div class="flex items-center gap-4">
+ <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-[#BD5579] to-pink-300 text-white font-serif-luxury text-2xl font-bold flex items-center justify-center shadow-md flex-shrink-0">
+ C
+ </div>
+ <div>
+ <div class="flex items-center gap-2 flex-wrap">
+ <h1 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Welcome, Clara Moreau</h1>
+ <span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">
+ Gold VIP Member
+ </span>
+ </div>
+ <p class="text-xs text-gray-500 mt-0.5">Primary Sanctuary: <strong>1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210</strong></p>
+ </div>
+ </div>
 
-    <!-- 3. BROWSE AVAILABLE BEAUTY SERVICES DIRECTLY IN DASHBOARD -->
-    <section class="space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 dark:border-zinc-800 pb-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-[#BD5579]">AVAILABLE DOORSTEP LOOKS</span>
-          <h2 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Browse Beauty Services</h2>
-          <p class="text-xs text-gray-500">Pick any treatment for instant certified specialist dispatch.</p>
-        </div>
+ <div class="flex items-center gap-4 flex-wrap">
+ <div class="p-4 rounded-2xl bg-pink-50 dark:bg-zinc-800/80 border border-pink-100 dark:border-zinc-700 text-center min-w-[130px]">
+ <span class="text-[10px] uppercase font-bold text-gray-400 block">Glow Points</span>
+ <span class="font-sans-clean text-2xl font-extrabold text-[#BD5579] tracking-tight" id="user-points-display">350 PTS</span>
+ <span class="text-[10px] text-emerald-600 block font-semibold">$35 credit available</span>
+ </div>
 
-        <!-- Category Tabs Filter -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full">
-          <button onclick="window.filterDashboardServices('all', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-[#141010] text-white dark:bg-white dark:text-[#141010] text-xs font-bold transition shadow-sm whitespace-nowrap">
-            All Services
-          </button>
-          <button onclick="window.filterDashboardServices('hair', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
-            Haircut & Spa
-          </button>
-          <button onclick="window.filterDashboardServices('facial', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
-            Facials & Skin
-          </button>
-          <button onclick="window.filterDashboardServices('nails', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
-            Nail Art & Pedi
-          </button>
-          <button onclick="window.filterDashboardServices('waxing', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
-            Waxing
-          </button>
-          <button onclick="window.filterDashboardServices('bridal', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
-            Bridal Glam
-          </button>
-        </div>
-      </div>
+ <button onclick="window.openBookingModal('hydra-facial')" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-6 py-4 rounded-2xl text-xs font-bold uppercase tracking-wider transition shadow-lg flex items-center gap-2">
+ <i class="fa-solid fa-calendar-plus"></i>
+ <span>Book Home Visit</span>
+ </button>
+ </div>
+ </div>
 
-      <!-- Services Catalog Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="dashboard-services-grid">
-        <!-- Injected dynamically by user-dashboard.js -->
-      </div>
-    </section>
+ <!-- 2. LIVE BEAUTICIAN ARRIVAL GPS TRACKER & ETA (INJECTED BY user-dashboard.js) -->
+ <div id="user-live-tracker-box">
+ <!-- Live SVG GPS Map, ETA countdown, Beautician details, Progress Steps -->
+ </div>
 
-    <!-- 4. PAST BOOKING HISTORY & INVOICES -->
-    <section class="bg-white dark:bg-[#1A1517] p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 dark:border-zinc-800 pb-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-[#BD5579]">TREATMENT LOG & INVOICES</span>
-          <h2 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Past Booking History</h2>
-        </div>
-        <span class="text-xs font-bold text-gray-400">3 Completed Visits</span>
-      </div>
+ <!-- 3. BROWSE AVAILABLE BEAUTY SERVICES DIRECTLY IN DASHBOARD -->
+ <section class="space-y-6">
+ <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 dark:border-zinc-800 pb-4">
+ <div>
+ <span class="text-xs font-bold uppercase tracking-widest text-[#BD5579]">AVAILABLE DOORSTEP LOOKS</span>
+ <h2 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Browse Beauty Services</h2>
+ <p class="text-xs text-gray-500">Pick any treatment for instant certified specialist dispatch.</p>
+ </div>
 
-      <!-- Past Bookings Cards Container -->
-      <div class="space-y-4" id="dashboard-history-container">
-        <!-- Injected dynamically by user-dashboard.js with Invoice & Rate buttons -->
-      </div>
-    </section>
+ <!-- Category Tabs Filter -->
+ <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full">
+ <button onclick="window.filterDashboardServices('all', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-[#141010] text-white dark:bg-white dark:text-[#141010] text-xs font-bold transition shadow-sm whitespace-nowrap">
+ All Services
+ </button>
+ <button onclick="window.filterDashboardServices('hair', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
+ Haircut & Spa
+ </button>
+ <button onclick="window.filterDashboardServices('facial', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
+ Facials & Skin
+ </button>
+ <button onclick="window.filterDashboardServices('nails', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
+ Nail Art & Pedi
+ </button>
+ <button onclick="window.filterDashboardServices('waxing', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
+ Waxing
+ </button>
+ <button onclick="window.filterDashboardServices('bridal', this)" class="catalog-tab-btn px-4 py-2 rounded-full bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 text-xs font-bold hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700 whitespace-nowrap">
+ Bridal Glam
+ </button>
+ </div>
+ </div>
 
-  </main>
+ <!-- Services Catalog Grid -->
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="dashboard-services-grid">
+ <!-- Injected dynamically by user-dashboard.js -->
+ </div>
+ </section>
 
-  <!-- ======================================================== -->
-  <!-- MODAL 1: BOOK A HOME VISIT MODAL                         -->
-  <!-- ======================================================== -->
-  <div id="dashboard-book-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-gray-200 dark:border-zinc-800 shadow-2xl space-y-6 relative max-h-[90vh] overflow-y-auto">
-      
-      <div class="flex justify-between items-start border-b border-gray-100 dark:border-zinc-800 pb-4">
-        <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">DISPATCH RESERVATION</span>
-          <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Book a Home Visit</h3>
-        </div>
-        <button onclick="window.closeBookingModal()" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 hover:text-gray-900 dark:hover:text-white flex items-center justify-center">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
+ <!-- 4. PAST BOOKING HISTORY & INVOICES -->
+ <section class="bg-white dark:bg-[#1A1517] p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm space-y-6">
+ <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <div>
+ <span class="text-xs font-bold uppercase tracking-widest text-[#BD5579]">TREATMENT LOG & INVOICES</span>
+ <h2 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Past Booking History</h2>
+ </div>
+ <span class="text-xs font-bold text-gray-400">3 Completed Visits</span>
+ </div>
 
-      <form onsubmit="window.handleDashboardBookingSubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Select Service Type *</label>
-          <select id="modal-book-service-select" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
-            <!-- Injected by user-dashboard.js -->
-          </select>
-        </div>
+ <!-- Past Bookings Cards Container -->
+ <div class="space-y-4" id="dashboard-history-container">
+ <!-- Injected dynamically by user-dashboard.js with Invoice & Rate buttons -->
+ </div>
+ </section>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Preferred Date *</label>
-            <input type="date" id="modal-book-date" required class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
-          </div>
+ </main>
 
-          <div>
-            <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Assigned Specialist</label>
-            <select id="modal-book-artist" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
-              <option value="Sophia Vance">Sophia Vance (Facials & Hair)</option>
-              <option value="Clara Moreau">Clara Moreau (Smoothing & Cuts)</option>
-              <option value="Nadia Al-Mansoor">Nadia Al-Mansoor (Nails & Bridal)</option>
-              <option value="Any Available Specialist">First Available Master Artist</option>
-            </select>
-          </div>
-        </div>
+ <!-- ======================================================== -->
+ <!-- MODAL 1: BOOK A HOME VISIT MODAL -->
+ <!-- ======================================================== -->
+ <div id="dashboard-book-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+ <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-gray-200 dark:border-zinc-800 shadow-2xl space-y-6 relative max-h-[90vh] overflow-y-auto">
+ 
+ <div class="flex justify-between items-start border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <div>
+ <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">DISPATCH RESERVATION</span>
+ <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Book a Home Visit</h3>
+ </div>
+ <button onclick="window.closeBookingModal()" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 hover:text-gray-900 dark:hover:text-white flex items-center justify-center">
+ <i class="fa-solid fa-xmark"></i>
+ </button>
+ </div>
 
-        <div>
-          <label class="block font-bold text-gray-700 dark:text-gray-300 mb-2">Preferred Arrival Window *</label>
-          <div class="grid grid-cols-3 gap-2">
-            <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
-              <input type="radio" name="modal-book-timeslot" value="10:00 AM" checked class="accent-[#BD5579] mb-1">
-              <span class="font-bold text-[11px]">10:00 AM</span>
-              <span class="text-[9px] text-gray-400">Morning</span>
-            </label>
+ <form onsubmit="window.handleDashboardBookingSubmit(event)" class="space-y-4 text-xs">
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Select Service Type *</label>
+ <select id="modal-book-service-select" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
+ <!-- Injected by user-dashboard.js -->
+ </select>
+ </div>
 
-            <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
-              <input type="radio" name="modal-book-timeslot" value="02:00 PM" class="accent-[#BD5579] mb-1">
-              <span class="font-bold text-[11px]">02:00 PM</span>
-              <span class="text-[9px] text-gray-400">Afternoon</span>
-            </label>
+ <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Preferred Date *</label>
+ <input type="date" id="modal-book-date" required class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
+ </div>
 
-            <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
-              <input type="radio" name="modal-book-timeslot" value="05:30 PM" class="accent-[#BD5579] mb-1">
-              <span class="font-bold text-[11px]">05:30 PM</span>
-              <span class="text-[9px] text-gray-400">Evening</span>
-            </label>
-          </div>
-        </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Assigned Specialist</label>
+ <select id="modal-book-artist" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-bold focus:outline-none focus:border-[#BD5579]">
+ <option value="Sophia Vance">Sophia Vance (Facials & Hair)</option>
+ <option value="Clara Moreau">Clara Moreau (Smoothing & Cuts)</option>
+ <option value="Nadia Al-Mansoor">Nadia Al-Mansoor (Nails & Bridal)</option>
+ <option value="Any Available Specialist">First Available Master Artist</option>
+ </select>
+ </div>
+ </div>
 
-        <div>
-          <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Sanctuary Address</label>
-          <input type="text" value="1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210" readonly class="w-full p-3 rounded-xl bg-gray-100 dark:bg-zinc-800/80 border border-gray-200 dark:border-zinc-700 text-gray-600 dark:text-gray-300">
-        </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-2">Preferred Arrival Window *</label>
+ <div class="grid grid-cols-3 gap-2">
+ <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
+ <input type="radio" name="modal-book-timeslot" value="10:00 AM" checked class="accent-[#BD5579] mb-1">
+ <span class="font-bold text-[11px]">10:00 AM</span>
+ <span class="text-[9px] text-gray-400">Morning</span>
+ </label>
 
-        <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800 text-[11px] text-emerald-800 dark:text-emerald-200 flex items-center gap-2">
-          <i class="fa-solid fa-shield-check text-emerald-600"></i> Free Doorstep Travel & Sealed Monodose Kit Guaranteed.
-        </div>
+ <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
+ <input type="radio" name="modal-book-timeslot" value="02:00 PM" class="accent-[#BD5579] mb-1">
+ <span class="font-bold text-[11px]">02:00 PM</span>
+ <span class="text-[9px] text-gray-400">Afternoon</span>
+ </label>
 
-        <button type="submit" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
-          <i class="fa-solid fa-sparkles"></i>
-          <span>Confirm & Dispatch Beautician</span>
-        </button>
-      </form>
-    </div>
-  </div>
+ <label class="p-3 rounded-xl border border-gray-200 dark:border-zinc-700 text-center cursor-pointer hover:border-[#BD5579] transition flex flex-col items-center">
+ <input type="radio" name="modal-book-timeslot" value="05:30 PM" class="accent-[#BD5579] mb-1">
+ <span class="font-bold text-[11px]">05:30 PM</span>
+ <span class="text-[9px] text-gray-400">Evening</span>
+ </label>
+ </div>
+ </div>
 
-  <!-- ======================================================== -->
-  <!-- MODAL 2: RATE COMPLETED SERVICE MODAL                     -->
-  <!-- ======================================================== -->
-  <div id="dashboard-rating-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-6 sm:p-8 max-w-md w-full border border-gray-200 dark:border-zinc-800 shadow-2xl space-y-6 relative">
-      
-      <div class="flex justify-between items-start border-b border-gray-100 dark:border-zinc-800 pb-4">
-        <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">SHARE YOUR EXPERIENCE</span>
-          <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Rate Your Doorstep Service</h3>
-        </div>
-        <button onclick="window.closeRatingModal()" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 hover:text-gray-900 dark:hover:text-white flex items-center justify-center">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Sanctuary Address</label>
+ <input type="text" value="1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210" readonly class="w-full p-3 rounded-xl bg-gray-100 dark:bg-zinc-800/80 border border-gray-200 dark:border-zinc-700 text-gray-600 dark:text-gray-300">
+ </div>
 
-      <div class="space-y-1 text-center">
-        <h4 class="font-bold text-sm text-gray-900 dark:text-white" id="rating-service-name">Moroccan Argan Hair Spa</h4>
-        <p class="text-xs text-gray-500">Therapist: <strong id="rating-therapist-name">Sophia Vance</strong></p>
-      </div>
+ <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800 text-[11px] text-emerald-800 dark:text-emerald-200 flex items-center gap-2">
+ <i class="fa-solid fa-shield-check text-emerald-600"></i> Free Doorstep Travel & Sealed Monodose Kit Guaranteed.
+ </div>
 
-      <!-- 5-Star Interactive Rating -->
-      <div class="flex justify-center items-center gap-2 text-3xl">
-        <button type="button" onclick="window.selectStarRating(1)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
-        <button type="button" onclick="window.selectStarRating(2)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
-        <button type="button" onclick="window.selectStarRating(3)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
-        <button type="button" onclick="window.selectStarRating(4)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
-        <button type="button" onclick="window.selectStarRating(5)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
-      </div>
-      <input type="hidden" id="rating-selected-value" value="5">
+ <button type="submit" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+ <i class="fa-solid fa-sparkles"></i>
+ <span>Confirm & Dispatch Beautician</span>
+ </button>
+ </form>
+ </div>
+ </div>
 
-      <form onsubmit="window.submitServiceRating(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Your Review & Notes</label>
-          <textarea id="rating-feedback-text" rows="3" placeholder="How was the hygiene, punctuality, and overall transformation?" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 focus:outline-none focus:border-[#BD5579]"></textarea>
-        </div>
+ <!-- ======================================================== -->
+ <!-- MODAL 2: RATE COMPLETED SERVICE MODAL -->
+ <!-- ======================================================== -->
+ <div id="dashboard-rating-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+ <div class="bg-white dark:bg-[#1A1517] rounded-3xl p-6 sm:p-8 max-w-md w-full border border-gray-200 dark:border-zinc-800 shadow-2xl space-y-6 relative">
+ 
+ <div class="flex justify-between items-start border-b border-gray-100 dark:border-zinc-800 pb-4">
+ <div>
+ <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#BD5579]">SHARE YOUR EXPERIENCE</span>
+ <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Rate Your Doorstep Service</h3>
+ </div>
+ <button onclick="window.closeRatingModal()" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-500 hover:text-gray-900 dark:hover:text-white flex items-center justify-center">
+ <i class="fa-solid fa-xmark"></i>
+ </button>
+ </div>
 
-        <div>
-          <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Optional Beautician Tip</label>
-          <div class="grid grid-cols-4 gap-2">
-            <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
-              <input type="radio" name="rating-tip" value="5" class="hidden">
-              <span>$5</span>
-            </label>
-            <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
-              <input type="radio" name="rating-tip" value="10" class="hidden">
-              <span>$10</span>
-            </label>
-            <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
-              <input type="radio" name="rating-tip" value="15" class="hidden">
-              <span>$15</span>
-            </label>
-            <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
-              <input type="radio" name="rating-tip" value="0" checked class="hidden">
-              <span>No Tip</span>
-            </label>
-          </div>
-        </div>
+ <div class="space-y-1 text-center">
+ <h4 class="font-bold text-sm text-gray-900 dark:text-white" id="rating-service-name">Moroccan Argan Hair Spa</h4>
+ <p class="text-xs text-gray-500">Therapist: <strong id="rating-therapist-name">Sophia Vance</strong></p>
+ </div>
 
-        <div class="p-3 rounded-xl bg-pink-50 dark:bg-pink-950/30 border border-pink-100 dark:border-pink-900 text-center text-[11px] text-[#BD5579] font-bold">
-          🎁 Submitting your review awards +50 Glow Reward Points instantly!
-        </div>
+ <!-- 5-Star Interactive Rating -->
+ <div class="flex justify-center items-center gap-2 text-3xl">
+ <button type="button" onclick="window.selectStarRating(1)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
+ <button type="button" onclick="window.selectStarRating(2)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
+ <button type="button" onclick="window.selectStarRating(3)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
+ <button type="button" onclick="window.selectStarRating(4)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
+ <button type="button" onclick="window.selectStarRating(5)" class="star-rating-btn text-amber-400 transition hover:scale-110"><i class="fa-solid fa-star"></i></button>
+ </div>
+ <input type="hidden" id="rating-selected-value" value="5">
 
-        <button type="submit" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider transition shadow-lg">
-          Submit Review & Earn 50 PTS
-        </button>
-      </form>
-    </div>
-  </div>
+ <form onsubmit="window.submitServiceRating(event)" class="space-y-4 text-xs">
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Your Review & Notes</label>
+ <textarea id="rating-feedback-text" rows="3" placeholder="How was the hygiene, punctuality, and overall transformation?" class="w-full p-3.5 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 focus:outline-none focus:border-[#BD5579]"></textarea>
+ </div>
 
-  <!-- ======================================================== -->
-  <!-- MODAL 3: DOWNLOAD & PRINT INVOICE MODAL                  -->
-  <!-- ======================================================== -->
-  <div id="dashboard-invoice-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-[#1A1517] rounded-3xl max-w-2xl w-full border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-      
-      <!-- Modal Top Bar -->
-      <div class="p-4 sm:px-6 bg-gray-50 dark:bg-zinc-800/60 border-b border-gray-200 dark:border-zinc-700 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-file-invoice text-[#BD5579]"></i>
-          <h3 class="font-bold text-sm text-gray-900 dark:text-white">Official Tax Invoice</h3>
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="window.printInvoice()" class="px-4 py-2 rounded-xl bg-[#BD5579] hover:bg-[#A33F62] text-white text-xs font-bold transition flex items-center gap-1.5 shadow">
-            <i class="fa-solid fa-print"></i>
-            <span>Print / Save PDF</span>
-          </button>
-          <button onclick="window.closeInvoiceModal()" class="w-8 h-8 rounded-full bg-gray-200 dark:bg-zinc-700 text-gray-600 dark:text-gray-300 flex items-center justify-center">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      </div>
+ <div>
+ <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Optional Beautician Tip</label>
+ <div class="grid grid-cols-4 gap-2">
+ <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
+ <input type="radio" name="rating-tip" value="5" class="hidden">
+ <span>$5</span>
+ </label>
+ <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
+ <input type="radio" name="rating-tip" value="10" class="hidden">
+ <span>$10</span>
+ </label>
+ <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
+ <input type="radio" name="rating-tip" value="15" class="hidden">
+ <span>$15</span>
+ </label>
+ <label class="p-2.5 rounded-xl border border-gray-200 dark:border-zinc-700 text-center font-bold cursor-pointer hover:border-[#BD5579]">
+ <input type="radio" name="rating-tip" value="0" checked class="hidden">
+ <span>No Tip</span>
+ </label>
+ </div>
+ </div>
 
-      <!-- Printable Invoice Sheet Area -->
-      <div class="overflow-y-auto flex-grow p-4 sm:p-6" id="invoice-modal-content">
-        <!-- Injected dynamically by user-dashboard.js -->
-      </div>
-    </div>
-  </div>
+ <div class="p-3 rounded-xl bg-pink-50 dark:bg-pink-950/30 border border-pink-100 dark:border-pink-900 text-center text-[11px] text-[#BD5579] font-bold">
+ Submitting your review awards +50 Glow Reward Points instantly!
+ </div>
 
-  <div id="footer-container"></div>
+ <button type="submit" class="w-full bg-[#BD5579] hover:bg-[#A33F62] text-white py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider transition shadow-lg">
+ Submit Review & Earn 50 PTS
+ </button>
+ </form>
+ </div>
+ </div>
 
-  <script src="../../src/js/theme.js"></script>
-  <script src="../../src/js/data.js"></script>
-  <script src="../../src/js/navbar.js"></script>
-  <script src="../../src/js/footer.js"></script>
-  <script src="../../src/js/user-dashboard.js"></script>
+ <!-- ======================================================== -->
+ <!-- MODAL 3: DOWNLOAD & PRINT INVOICE MODAL -->
+ <!-- ======================================================== -->
+ <div id="dashboard-invoice-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+ <div class="bg-white dark:bg-[#1A1517] rounded-3xl max-w-2xl w-full border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+ 
+ <!-- Modal Top Bar -->
+ <div class="p-4 sm:px-6 bg-gray-50 dark:bg-zinc-800/60 border-b border-gray-200 dark:border-zinc-700 flex justify-between items-center">
+ <div class="flex items-center gap-2">
+ <i class="fa-solid fa-file-invoice text-[#BD5579]"></i>
+ <h3 class="font-bold text-sm text-gray-900 dark:text-white">Official Tax Invoice</h3>
+ </div>
+ <div class="flex items-center gap-2">
+ <button onclick="window.printInvoice()" class="px-4 py-2 rounded-xl bg-[#BD5579] hover:bg-[#A33F62] text-white text-xs font-bold transition flex items-center gap-1.5 shadow">
+ <i class="fa-solid fa-print"></i>
+ <span>Print / Save PDF</span>
+ </button>
+ <button onclick="window.closeInvoiceModal()" class="w-8 h-8 rounded-full bg-gray-200 dark:bg-zinc-700 text-gray-600 dark:text-gray-300 flex items-center justify-center">
+ <i class="fa-solid fa-xmark"></i>
+ </button>
+ </div>
+ </div>
+
+ <!-- Printable Invoice Sheet Area -->
+ <div class="overflow-y-auto flex-grow p-4 sm:p-6" id="invoice-modal-content">
+ <!-- Injected dynamically by user-dashboard.js -->
+ </div>
+ </div>
+ </div>
+
+ <script src="../../src/js/theme.js"></script>
+ <script src="../../src/js/data.js"></script>
+ <script src="../../src/js/user-dashboard.js"></script>
 </body>
 </html>
