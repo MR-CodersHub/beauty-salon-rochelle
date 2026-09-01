@@ -49,16 +49,16 @@
  }
 
  return `
- <label class="group relative flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#1A1517] border-2 ${isChecked ? 'border-[#BD5579] bg-pink-50/30 dark:bg-pink-950/20' : 'border-gray-200 dark:border-zinc-800'} hover:border-[#BD5579] transition cursor-pointer shadow-sm">
- <input type="checkbox" name="booking-service-item" value="${s.id}" ${isChecked ? 'checked' : ''} onchange="window.toggleBookingService('${s.id}')" class="mt-1 accent-[#BD5579] w-4 h-4 rounded">
- <img src="${root}assets/img/${s.image}" alt="${s.title}" class="w-16 h-16 rounded-xl object-cover flex-shrink-0">
- <div class="flex-grow space-y-1">
+ <label class="group relative flex items-start gap-3 sm:gap-4 p-3.5 sm:p-5 rounded-2xl bg-white dark:bg-[#1A1517] border-2 ${isChecked ? 'border-[#BD5579] bg-pink-50/30 dark:bg-pink-950/20' : 'border-gray-200 dark:border-zinc-800'} hover:border-[#BD5579] transition cursor-pointer shadow-sm">
+ <input type="checkbox" name="booking-service-item" value="${s.id}" ${isChecked ? 'checked' : ''} onchange="window.toggleBookingService('${s.id}')" class="mt-1 accent-[#BD5579] w-4 h-4 rounded flex-shrink-0">
+ <img src="${root}assets/img/${s.image}" alt="${s.title}" class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover flex-shrink-0">
+ <div class="flex-grow min-w-0 space-y-1">
  <div class="flex justify-between items-start flex-wrap gap-1">
- <h4 class="font-bold text-sm text-gray-900 dark:text-white group-hover:text-[#BD5579] transition">${s.title}</h4>
- <span class="font-sans-clean text-lg font-extrabold text-gray-900 dark:text-white tracking-tight">$${s.price}</span>
+ <h4 class="font-bold text-xs sm:text-sm text-gray-900 dark:text-white group-hover:text-[#BD5579] transition">${s.title}</h4>
+ <span class="font-sans-clean text-base sm:text-lg font-extrabold text-gray-900 dark:text-white tracking-tight">$${s.price}</span>
  </div>
  <p class="text-xs text-gray-500 line-clamp-1">${s.shortDesc}</p>
- <div class="flex items-center gap-3 text-[11px] text-gray-400">
+ <div class="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] text-gray-400 flex-wrap">
  <span><i class="fa-regular fa-clock mr-1"></i> ${s.duration} mins</span>
  <span>•</span>
  <span class="text-emerald-600 font-semibold"><i class="fa-solid fa-shield-virus mr-1"></i> Monodose Kit</span>

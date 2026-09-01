@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ROCHELLE AT-HOME | Universal Footer Component
  * Renders identical luxury footer across all public pages with newsletter validation
  * and navigation links.
@@ -39,7 +39,8 @@
  
  <!-- Social Icons -->
  <div class="flex items-center gap-3 pt-2">
- <a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i class="fa-brands fa-instagram"></i></a>
+ <a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i cl<a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+ ass="fa-brands fa-instagram"></i></a>
  <a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i class="fa-brands fa-tiktok"></i></a>
  <a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i class="fa-brands fa-pinterest"></i></a>
  <a href="#" class="w-9 h-9 rounded-full bg-zinc-800 hover:bg-[#BD5579] text-white flex items-center justify-center transition text-sm"><i class="fa-brands fa-youtube"></i></a>

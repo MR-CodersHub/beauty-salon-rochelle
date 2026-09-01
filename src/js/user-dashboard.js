@@ -1,4 +1,4 @@
-/**
+﻿/*
  * ROCHELLE AT-HOME | Comprehensive User Client Dashboard Engine
  * Implements:
  * 1. Browse Available Beauty Services (Haircut, Facial, Waxing, Nails, Bridal) with quick-book.
@@ -36,7 +36,7 @@
  title: 'Master Aesthetician & Skin Specialist',
  rating: 4.99,
  sessions: 842,
- vehicle: 'Rose-Gold Mini Cooper (CA • 8XYZ42)',
+ vehicle: 'CA • 8XYZ42',
  phone: '+1 (310) 555-0199',
  kitId: '#LX-881 UV-C Sealed',
  image: 'expert.jpg'
@@ -203,141 +203,36 @@
  const isArrived = b.status === 'arrived';
 
  container.innerHTML = `
- <div class="bg-white dark:bg-[#1A1517] rounded-3xl border-2 border-[#BD5579] shadow-2xl p-6 sm:p-8 space-y-6">
+
+
  
- <!-- Header & Beautician Status -->
- <div class="flex justify-between items-center flex-wrap gap-4 border-b border-gray-100 dark:border-zinc-800 pb-5">
- <div class="flex items-center gap-3">
- <span class="w-3.5 h-3.5 rounded-full ${isArrived ? 'bg-emerald-500 shadow-[0_0_12px_#10B981]' : 'bg-lime-400 shadow-[0_0_12px_#A3E635]'} animate-pulse"></span>
- <div>
- <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
- ${isArrived ? 'Therapist Arrived At Your Door' : 'Live Beautician Arrival Tracker'}
- </h3>
- <p class="text-xs text-gray-500">Booking #${b.id} • ${b.serviceName}</p>
- </div>
- </div>
-
- <div class="flex items-center gap-2">
- <span class="bg-pink-100 dark:bg-pink-950/60 text-[#BD5579] text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider">
- <i class="fa-solid fa-satellite-dish mr-1"></i> Live GPS Feed
- </span>
- <button onclick="window.toggleSimulationState()" class="text-[11px] font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white underline px-2">
- ${isArrived ? 'Reset Demo Route' : 'Simulate Doorstep Arrival'}
- </button>
- </div>
- </div>
-
- <!-- Simulated GPS Route Canvas -->
- <div class="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-[#FAF4F2] dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 shadow-inner">
- <svg class="w-full h-full" viewBox="0 0 600 300">
- <!-- Grid lines -->
- <line x1="0" y1="75" x2="600" y2="75" stroke="#EDE2DE" class="dark:stroke-zinc-800" stroke-dasharray="4,4"/>
- <line x1="0" y1="150" x2="600" y2="150" stroke="#EDE2DE" class="dark:stroke-zinc-800" stroke-dasharray="4,4"/>
- <line x1="0" y1="225" x2="600" y2="225" stroke="#EDE2DE" class="dark:stroke-zinc-800" stroke-dasharray="4,4"/>
-
- <!-- Roads -->
- <path d="M 50 150 Q 200 80, 350 180 T 550 120" stroke="#E6D7D2" stroke-width="18" fill="none" stroke-linecap="round" class="dark:stroke-zinc-800"/>
- <path d="M 120 40 L 120 260" stroke="#E6D7D2" stroke-width="12" fill="none" stroke-linecap="round" class="dark:stroke-zinc-800"/>
- <path d="M 450 40 L 450 260" stroke="#E6D7D2" stroke-width="12" fill="none" stroke-linecap="round" class="dark:stroke-zinc-800"/>
- 
- <!-- Animated Route Trail -->
- <path d="M 50 150 Q 200 80, 350 180 T 550 120" stroke="#BD5579" stroke-width="6" fill="none" class="route-dashed-line"/>
-
- <!-- Doorstep Destination Pin -->
- <g transform="translate(540, 110)">
- <circle cx="0" cy="0" r="18" fill="#141010" class="dark:fill-white"/>
- <circle cx="0" cy="0" r="7" fill="#BD5579"/>
- <text x="0" y="32" font-size="10" font-weight="800" fill="#141010" text-anchor="middle" class="dark:fill-white font-sans-clean uppercase tracking-wider">Your Doorstep</text>
- </g>
-
- <!-- Vehicle Marker -->
- <g id="live-vehicle-marker" transform="translate(${b.markerX}, ${isArrived ? 110 : 120})">
- <circle cx="0" cy="0" r="22" fill="rgba(189, 85, 121, 0.25)" class="radar-pulse"/>
- <circle cx="0" cy="0" r="16" fill="#BD5579"/>
- <text x="0" y="5" font-family="FontAwesome" font-size="13" fill="#FFFFFF" text-anchor="middle">&#xf1ba;</text>
- <rect x="-48" y="-36" width="96" height="20" rx="5" fill="#141010"/>
- <text x="0" y="-22" font-size="9" font-weight="800" fill="#FFFFFF" text-anchor="middle" class="font-sans-clean font-extrabold uppercase">
- ${isArrived ? 'ARRIVED NOW' : `${b.etaMinutes} MINS AWAY`}
- </text>
- </g>
- </svg>
-
- <!-- ETA Live Overlay Card -->
- <div class="absolute top-4 left-4 bg-black/85 backdrop-blur-md text-white px-4 py-3 rounded-2xl flex items-center gap-4 shadow-xl border border-white/10">
- <div class="border-r border-white/20 pr-4 text-center">
- <span class="font-sans-clean text-3xl font-extrabold text-[#BD5579] leading-none tracking-tight" id="live-eta-display">
- ${isArrived ? '0' : b.etaMinutes}
- </span>
- <span class="block text-[9px] font-extrabold uppercase tracking-widest text-gray-300">MINS</span>
- </div>
- <div>
- <strong class="text-xs block text-white font-bold">
- ${isArrived ? 'Specialist Ringing Doorbell' : 'Estimated Doorstep Arrival'}
- </strong>
- <span class="text-[11px] text-gray-300" id="live-eta-subtext">
- ${isArrived ? 'Please ensure entryway is clear' : '02:08 PM • Traffic is clear'}
- </span>
- </div>
- </div>
- </div>
-
- <!-- 4-Stage Arrival Progress Stepper -->
- <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center pt-2">
- <div class="flex flex-col items-center gap-2">
- <span class="w-8 h-8 rounded-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] flex items-center justify-center text-xs font-bold shadow">
- <i class="fa-solid fa-check"></i>
- </span>
- <span class="text-[11px] font-bold text-gray-800 dark:text-gray-200">1. Confirmed</span>
- </div>
-
- <div class="flex flex-col items-center gap-2">
- <span class="w-8 h-8 rounded-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] flex items-center justify-center text-xs font-bold shadow">
- <i class="fa-solid fa-shield-virus"></i>
- </span>
- <span class="text-[11px] font-bold text-gray-800 dark:text-gray-200">2. Kit Sterilized</span>
- </div>
-
- <div class="flex flex-col items-center gap-2">
- <span class="w-8 h-8 rounded-full ${isArrived ? 'bg-[#141010] dark:bg-white text-white dark:text-[#141010]' : 'bg-[#BD5579] text-white animate-bounce'} flex items-center justify-center text-xs font-bold shadow">
- <i class="fa-solid fa-car-side"></i>
- </span>
- <span class="text-[11px] font-bold ${isArrived ? 'text-gray-800 dark:text-gray-200' : 'text-[#BD5579]'}">3. En Route</span>
- </div>
-
- <div class="flex flex-col items-center gap-2">
- <span class="w-8 h-8 rounded-full ${isArrived ? 'bg-[#BD5579] text-white shadow-lg animate-pulse' : 'bg-gray-200 dark:bg-zinc-800 text-gray-400'} flex items-center justify-center text-xs font-bold">
- <i class="fa-solid fa-door-open"></i>
- </span>
- <span class="text-[11px] font-bold ${isArrived ? 'text-[#BD5579]' : 'text-gray-400'}">4. At Doorstep</span>
- </div>
- </div>
 
  <!-- Assigned Beautician Details Card -->
- <div class="p-5 rounded-2xl bg-gray-50 dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-700 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
- <div class="flex items-center gap-4">
- <img src="../../assets/img/${b.therapist.image}" alt="${b.therapist.name}" class="w-16 h-16 rounded-full object-cover border-2 border-[#BD5579] shadow">
- <div class="space-y-0.5">
- <div class="flex items-center gap-2">
- <span class="text-[10px] uppercase font-extrabold tracking-wider text-[#BD5579] bg-pink-50 dark:bg-pink-950/60 px-2 py-0.5 rounded">
+ <div class="p-4 sm:p-5 rounded-2xl bg-gray-50 dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+ <div class="flex items-center gap-3 sm:gap-4">
+ <img src="../../assets/img/${b.therapist.image}" alt="${b.therapist.name}" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-[#BD5579] shadow flex-shrink-0">
+ <div class="space-y-0.5 min-w-0">
+ <div class="flex items-center gap-1.5 flex-wrap">
+ <span class="text-[9px] sm:text-[10px] uppercase font-extrabold tracking-wider text-[#BD5579] bg-pink-50 dark:bg-pink-950/60 px-2 py-0.5 rounded">
  CIDESCO Certified
  </span>
- <span class="text-[10px] text-emerald-600 font-bold bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">
+ <span class="text-[9px] sm:text-[10px] text-emerald-600 font-bold bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">
  <i class="fa-solid fa-shield-check"></i> Police Vetted
  </span>
  </div>
- <h4 class="font-bold text-base text-gray-900 dark:text-white">${b.therapist.name}</h4>
- <p class="text-xs text-gray-500 dark:text-gray-400">
+ <h4 class="font-bold text-sm sm:text-base text-gray-900 dark:text-white truncate">${b.therapist.name}</h4>
+ <p class="text-xs text-gray-500 dark:text-gray-400 truncate">
  <i class="fa-solid fa-star text-amber-500"></i> <strong>${b.therapist.rating}</strong> (${b.therapist.sessions} visits) • ${b.therapist.vehicle}
  </p>
- <p class="text-[11px] text-gray-400">Kit Seal: <strong class="text-gray-700 dark:text-gray-300">${b.therapist.kitId}</strong></p>
+ <p class="text-[10px] sm:text-[11px] text-gray-400">Kit Seal: <strong class="text-gray-700 dark:text-gray-300">${b.therapist.kitId}</strong></p>
  </div>
  </div>
 
- <div class="flex items-center gap-2 w-full md:w-auto">
- <button onclick="alert('Calling therapist Sophia Vance at ${b.therapist.phone}...')" class="flex-1 md:flex-initial px-5 py-2.5 rounded-xl bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
+ <div class="flex items-center gap-2 w-full sm:w-auto">
+ <button onclick="alert('Calling therapist Sophia Vance at ${b.therapist.phone}...')" class="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow">
  <i class="fa-solid fa-phone"></i> Call
  </button>
- <button onclick="alert('Encrypted dispatch messaging opened with Sophia Vance.')" class="flex-1 md:flex-initial px-5 py-2.5 rounded-xl border border-gray-300 dark:border-zinc-600 text-xs font-bold text-gray-800 dark:text-gray-200 hover:border-[#BD5579] hover:text-[#BD5579] transition flex items-center justify-center gap-1.5">
+ <button onclick="alert('Encrypted dispatch messaging opened with Sophia Vance.')" class="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl border border-gray-300 dark:border-zinc-600 text-xs font-bold text-gray-800 dark:text-gray-200 hover:border-[#BD5579] hover:text-[#BD5579] transition flex items-center justify-center gap-1.5">
  <i class="fa-solid fa-message"></i> Message
  </button>
  </div>
@@ -514,7 +409,7 @@
  </span>
  <span class="text-xs text-gray-500 font-semibold">${item.date} • ${item.time}</span>
  <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">
- ● ${item.status}
+ ? ${item.status}
  </span>
  </div>
 
@@ -623,106 +518,108 @@
  if (!container || !modal) return;
 
  const tax = Math.round(item.price * 0.08);
- const total = item.price + tax;
+  const total = item.price + tax;
 
- container.innerHTML = `
- <div id="printable-invoice-sheet" class="p-8 bg-white text-gray-900 space-y-6 text-xs">
- 
- <!-- Invoice Header -->
- <div class="flex justify-between items-start border-b border-gray-200 pb-6">
- <div>
- <div class="flex items-center gap-2">
- <img src="../../assets/img/logo.png" alt="ROCHELLE Logo" class="h-8 w-auto">
- <span class="font-serif-luxury text-2xl font-bold tracking-widest text-[#141010]">ROCHELLE</span>
- </div>
- <span class="text-[9px] uppercase tracking-[0.25em] text-[#BD5579] font-bold">At Home Studio Concierge</span>
- <p class="text-[11px] text-gray-500 mt-2">
- 9600 Wilshire Blvd, Beverly Hills, CA 90212<br>
- concierge@rochelle.com • (310) 555-LUXE
- </p>
- </div>
+  container.innerHTML = `
+    <div id="printable-invoice-sheet" class="p-4 sm:p-8 bg-white text-gray-900 space-y-6 text-xs">
+      
+      <!-- Invoice Header -->
+      <div class="flex flex-col sm:flex-row justify-between items-start gap-4 border-b border-gray-200 pb-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <img src="../../assets/img/logo.png" alt="ROCHELLE Logo" class="h-8 w-auto">
+            <span class="font-serif-luxury text-2xl font-bold tracking-widest text-[#141010]">ROCHELLE</span>
+          </div>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#BD5579] font-bold">At Home Studio Concierge</span>
+          <p class="text-[11px] text-gray-500 mt-2">
+            9600 Wilshire Blvd, Beverly Hills, CA 90212<br>
+            concierge@rochelle.com • (310) 555-LUXE
+          </p>
+        </div>
 
- <div class="text-right space-y-1">
- <span class="text-[10px] uppercase font-bold tracking-widest text-gray-400 block">OFFICIAL INVOICE</span>
- <h3 class="font-serif-luxury text-2xl font-bold text-gray-900">#INV-${item.id}</h3>
- <p class="text-gray-500 font-semibold">Date: ${item.date}</p>
- <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-bold text-[10px] rounded uppercase">PAID IN FULL</span>
- </div>
- </div>
+        <div class="sm:text-right space-y-1">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-gray-400 block">OFFICIAL INVOICE</span>
+          <h3 class="font-serif-luxury text-2xl font-bold text-gray-900">#INV-${item.id}</h3>
+          <p class="text-gray-500 font-semibold">Date: ${item.date}</p>
+          <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-bold text-[10px] rounded uppercase">PAID IN FULL</span>
+        </div>
+      </div>
 
- <!-- Bill To Details -->
- <div class="grid grid-cols-2 gap-6 p-4 rounded-xl bg-gray-50 border border-gray-100">
- <div>
- <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">BILLED TO</span>
- <p class="font-bold text-sm text-gray-900">${dashboardState.user.name}</p>
- <p class="text-gray-600">${dashboardState.user.address}</p>
- <p class="text-gray-500">${dashboardState.user.phone}</p>
- </div>
+      <!-- Bill To Details -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">BILLED TO</span>
+          <p class="font-bold text-sm text-gray-900">${dashboardState.user.name}</p>
+          <p class="text-gray-600">${dashboardState.user.address}</p>
+          <p class="text-gray-500">${dashboardState.user.phone}</p>
+        </div>
 
- <div>
- <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">APPOINTMENT DOSSIER</span>
- <p class="text-gray-700"><strong>Specialist:</strong> ${item.therapistName}</p>
- <p class="text-gray-700"><strong>Payment:</strong> ${item.paymentMethod || 'Credit Card'}</p>
- <p class="text-gray-700"><strong>Sanitation Kit:</strong> Single-Use Monodose Sterile</p>
- </div>
- </div>
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">APPOINTMENT DOSSIER</span>
+          <p class="text-gray-700"><strong>Specialist:</strong> ${item.therapistName}</p>
+          <p class="text-gray-700"><strong>Payment:</strong> ${item.paymentMethod || 'Credit Card'}</p>
+          <p class="text-gray-700"><strong>Sanitation Kit:</strong> Single-Use Monodose Sterile</p>
+        </div>
+      </div>
 
- <!-- Itemized Table -->
- <table class="w-full text-left">
- <thead>
- <tr class="border-b-2 border-gray-900 text-gray-900 font-bold text-[10px] uppercase tracking-wider">
- <th class="py-2">Treatment / Service</th>
- <th class="py-2 text-center">Qty</th>
- <th class="py-2 text-right">Rate</th>
- <th class="py-2 text-right">Amount</th>
- </tr>
- </thead>
- <tbody class="divide-y divide-gray-100">
- <tr>
- <td class="py-3">
- <strong class="text-sm block">${item.serviceName}</strong>
- <span class="text-gray-500 text-[11px]">Doorstep mobile spa visit with medical-grade sanitized equipment</span>
- </td>
- <td class="py-3 text-center font-bold">1</td>
- <td class="py-3 text-right font-sans-clean font-bold">$${item.price}.00</td>
- <td class="py-3 text-right font-sans-clean font-bold">$${item.price}.00</td>
- </tr>
- <tr>
- <td class="py-2 text-gray-500">Doorstep Travel & Sterile Kit Dispatch</td>
- <td class="py-2 text-center font-bold">1</td>
- <td class="py-2 text-right text-emerald-600 font-bold uppercase">$0.00</td>
- <td class="py-2 text-right text-emerald-600 font-bold uppercase">COMPLIMENTARY</td>
- </tr>
- </tbody>
- </table>
+      <!-- Itemized Table -->
+      <div class="overflow-x-auto responsive-table-wrapper">
+        <table class="w-full min-w-[460px] text-left">
+          <thead>
+            <tr class="border-b-2 border-gray-900 text-gray-900 font-bold text-[10px] uppercase tracking-wider">
+              <th class="py-2">Treatment / Service</th>
+              <th class="py-2 text-center">Qty</th>
+              <th class="py-2 text-right">Rate</th>
+              <th class="py-2 text-right">Amount</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr>
+              <td class="py-3">
+                <strong class="text-sm block">${item.serviceName}</strong>
+                <span class="text-gray-500 text-[11px]">Doorstep mobile spa visit with medical-grade sanitized equipment</span>
+              </td>
+              <td class="py-3 text-center font-bold">1</td>
+              <td class="py-3 text-right font-sans-clean font-bold">$${item.price}.00</td>
+              <td class="py-3 text-right font-sans-clean font-bold">$${item.price}.00</td>
+            </tr>
+            <tr>
+              <td class="py-2 text-gray-500">Doorstep Travel & Sterile Kit Dispatch</td>
+              <td class="py-2 text-center font-bold">1</td>
+              <td class="py-2 text-right text-emerald-600 font-bold uppercase">$0.00</td>
+              <td class="py-2 text-right text-emerald-600 font-bold uppercase">COMPLIMENTARY</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
- <!-- Total Calculation -->
- <div class="border-t border-gray-200 pt-4 flex justify-end">
- <div class="w-64 space-y-2">
- <div class="flex justify-between text-gray-600">
- <span>Subtotal:</span>
- <span class="font-sans-clean font-bold">$${item.price}.00</span>
- </div>
- <div class="flex justify-between text-gray-600">
- <span>Estimated Tax (8%):</span>
- <span class="font-sans-clean font-bold">$${tax}.00</span>
- </div>
- <div class="flex justify-between text-gray-600">
- <span>Travel Concierge:</span>
- <span class="font-bold text-emerald-600">FREE</span>
- </div>
- <div class="flex justify-between text-base font-bold text-gray-900 border-t border-gray-900 pt-2">
- <span>Total Paid:</span>
- <span class="font-sans-clean text-lg font-extrabold text-[#BD5579]">$${total}.00</span>
- </div>
- </div>
- </div>
+      <!-- Total Calculation -->
+      <div class="border-t border-gray-200 pt-4 flex justify-end">
+        <div class="w-full sm:w-64 space-y-2">
+          <div class="flex justify-between text-gray-600">
+            <span>Subtotal:</span>
+            <span class="font-sans-clean font-bold">$${item.price}.00</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Estimated Tax (8%):</span>
+            <span class="font-sans-clean font-bold">$${tax}.00</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Travel Concierge:</span>
+            <span class="font-bold text-emerald-600">FREE</span>
+          </div>
+          <div class="flex justify-between text-base font-bold text-gray-900 border-t border-gray-900 pt-2">
+            <span>Total Paid:</span>
+            <span class="font-sans-clean text-lg font-extrabold text-[#BD5579]">$${total}.00</span>
+          </div>
+        </div>
+      </div>
 
- <div class="text-center text-[10px] text-gray-400 pt-4 border-t border-gray-100">
- Thank you for choosing ROCHELLE At-Home Studio. Safe-Salon™ Zero-Contamination Guaranteed.
- </div>
- </div>
- `;
+      <div class="text-center text-[10px] text-gray-400 pt-4 border-t border-gray-100">
+        Thank you for choosing ROCHELLE At-Home Studio. Safe-Salon&trade; Zero-Contamination Guaranteed.
+      </div>
+    </div>
+    `;
 
  modal.classList.remove('hidden');
  };
