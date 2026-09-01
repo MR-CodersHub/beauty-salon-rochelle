@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Operations Center | ROCHELLE Doorstep Salon</title>
+  <meta name="description" content="Manage mobile beautician dispatch fleet, appointment status, revenue analytics, and hygiene audit records.">
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+
+  <!-- TailwindCSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../src/js/tailwind.config.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+<body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
+
+  <div id="navbar-container"></div>
+
+  <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    
+    <!-- DASHBOARD HEADER -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 dark:border-zinc-800 pb-6">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] font-extrabold text-[10px] uppercase">
+            Admin Console
+          </span>
+          <span class="text-xs text-gray-500 font-semibold">• Live Operations</span>
+        </div>
+        <h1 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-1">
+          Salon Dispatch & Revenue Command
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="../../auth/user/user-dashboard.html" class="px-4 py-2.5 rounded-full bg-gray-100 dark:bg-zinc-800 text-xs font-bold text-gray-700 dark:text-gray-200 hover:text-[#BD5579] transition flex items-center gap-1.5">
+          <i class="fa-solid fa-user"></i> Switch to User View
+        </a>
+        <button onclick="window.showToast('Data synced with central cloud node!')" class="px-4 py-2.5 rounded-full bg-[#BD5579] hover:bg-[#A33F62] text-white text-xs font-bold transition flex items-center gap-1.5 shadow">
+          <i class="fa-solid fa-arrows-rotate"></i> Sync Node
+        </button>
+      </div>
+    </div>
+
+    <!-- METRICS CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <span class="text-xs font-bold uppercase text-gray-400">Today's Revenue</span>
+        <div class="flex justify-between items-baseline">
+          <span class="font-sans-clean text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">$4,890.00</span>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">+18.4%</span>
+        </div>
+        <p class="text-[11px] text-gray-500">38 Doorstep sessions delivered</p>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <span class="text-xs font-bold uppercase text-gray-400">Active Fleet On Road</span>
+        <div class="flex justify-between items-baseline">
+          <span class="font-sans-clean text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">14 Artists</span>
+          <span class="text-xs font-bold text-lime-600 bg-lime-50 dark:bg-lime-950/40 px-2 py-0.5 rounded">100% On-Time</span>
+        </div>
+        <p class="text-[11px] text-gray-500">Avg arrival: 12.4 minutes</p>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <span class="text-xs font-bold uppercase text-gray-400">Monodose Kits Sterilized</span>
+        <div class="flex justify-between items-baseline">
+          <span class="font-sans-clean text-3xl font-extrabold text-[#BD5579] tracking-tight">142 Units</span>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded">UV Certified</span>
+        </div>
+        <p class="text-[11px] text-gray-500">Zero cross-contamination record</p>
+      </div>
+
+      <div class="p-6 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <span class="text-xs font-bold uppercase text-gray-400">Client CSAT Score</span>
+        <div class="flex justify-between items-baseline">
+          <span class="font-sans-clean text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">4.98 ★</span>
+          <span class="text-xs font-bold text-amber-500 bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded">50k+ Reviews</span>
+        </div>
+        <p class="text-[11px] text-gray-500">Based on 1,420 monthly reviews</p>
+      </div>
+    </div>
+
+    <!-- BOOKINGS MANAGEMENT OPERATIONS TABLE -->
+    <div class="bg-white dark:bg-[#1A1517] rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h2 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Active Doorstep Dispatch Board</h2>
+          <p class="text-xs text-gray-500">Real-time status of scheduled client sessions and specialist routing.</p>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap text-xs">
+          <button onclick="window.filterAdminBookings('all')" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-zinc-800 font-bold hover:bg-[#BD5579] hover:text-white transition">All</button>
+          <button onclick="window.filterAdminBookings('En Route')" class="px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 font-bold hover:bg-[#BD5579] hover:text-white transition">En Route</button>
+          <button onclick="window.filterAdminBookings('Confirmed')" class="px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 font-bold hover:bg-[#BD5579] hover:text-white transition">Confirmed</button>
+          <button onclick="window.filterAdminBookings('Completed')" class="px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-bold hover:bg-[#BD5579] hover:text-white transition">Completed</button>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead class="text-[10px] font-extrabold uppercase tracking-wider text-gray-400 border-b border-gray-100 dark:border-zinc-800 bg-gray-50/50 dark:bg-zinc-800/20">
+            <tr>
+              <th class="py-3 px-4">Booking ID</th>
+              <th class="py-3 px-4">Client Name</th>
+              <th class="py-3 px-4">Treatment</th>
+              <th class="py-3 px-4">Time Slot</th>
+              <th class="py-3 px-4">Assigned Artist</th>
+              <th class="py-3 px-4">Amount</th>
+              <th class="py-3 px-4">Status</th>
+              <th class="py-3 px-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-bookings-tbody">
+            <!-- Dynamically populated by admin-dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CATALOG QUICK PUBLISHER & FLEET STATS -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Quick Publish New Treatment -->
+      <div class="bg-white dark:bg-[#1A1517] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm space-y-4">
+        <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Publish New Treatment</h3>
+        <p class="text-xs text-gray-500">Add a new doorstep service directly to the live customer catalog.</p>
+
+        <form onsubmit="window.addNewAdminService(event, this);" class="space-y-3 text-xs">
+          <div>
+            <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Treatment Title</label>
+            <input type="text" id="new-service-title" required placeholder="e.g. Japanese Head Spa Detox" class="w-full p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Price ($)</label>
+              <input type="number" id="new-service-price" required placeholder="99" class="w-full p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
+            </div>
+            <div>
+              <label class="block font-bold text-gray-700 dark:text-gray-300 mb-1">Category</label>
+              <select id="new-service-cat" class="w-full p-3 rounded-xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 font-medium">
+                <option value="hair">Hair Couture</option>
+                <option value="skin">Skin & Facials</option>
+                <option value="nails">Nails & Pedi</option>
+                <option value="bridal">Bridal Glam</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white py-3 rounded-xl font-bold uppercase tracking-wider transition shadow">
+            Publish to Live Menu
+          </button>
+        </form>
+      </div>
+
+      <!-- Top Performing Specialists Leaderboard -->
+      <div class="lg:col-span-2 bg-white dark:bg-[#1A1517] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-zinc-800 shadow-sm space-y-4">
+        <div class="flex justify-between items-center">
+          <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Top Performing Therapists</h3>
+          <span class="text-xs font-bold text-[#BD5579]">This Month</span>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-3.5 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <img src="../../assets/img/expert.jpg" class="w-10 h-10 rounded-full object-cover border border-[#BD5579]">
+              <div>
+                <strong class="text-xs block text-gray-900 dark:text-white">Sophia Vance</strong>
+                <span class="text-[11px] text-gray-500">HydraGlow & Moroccan Hair Specialist • 42 Sessions</span>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="font-bold text-amber-500 text-xs">4.99 ★</span>
+              <span class="block text-[10px] text-emerald-600 font-bold">$5,040 generated</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3.5 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800/50 border border-gray-200 dark:border-zinc-700">
+            <div class="flex items-center gap-3">
+              <img src="../../assets/img/hero.jpg" class="w-10 h-10 rounded-full object-cover border border-[#BD5579]">
+              <div>
+                <strong class="text-xs block text-gray-900 dark:text-white">Clara Moreau</strong>
+                <span class="text-[11px] text-gray-500">Keratin Silk & Sculpting Specialist • 38 Sessions</span>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="font-bold text-amber-500 text-xs">4.98 ★</span>
+              <span class="block text-[10px] text-emerald-600 font-bold">$4,560 generated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../../src/js/theme.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/admin-dashboard.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+</body>
+</html>

@@ -1,1220 +1,556 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCHELLE AT-HOME | Couture Doorstep Beauty Salon & Spa</title>
-    <meta name="description"
-        content="Experience 5-star salon & spa services in the comfort of your home. Trained certified beauty professionals, 100% sealed hygiene kits, live beautician tracking, and transparent pricing.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROCHELLE AT-HOME | Couture Doorstep Beauty Salon & Spa</title>
+  <meta name="description" content="Experience 5-star salon & spa transformations in the comfort of your home. Certified master therapists, 100% sealed monodose hygiene kits, and live arrival tracking.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+  <!-- TailwindCSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/js/tailwind.config.js"></script>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
 
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
+<body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
 
-<body>
+  <!-- Shared Universal Navbar Placeholder -->
+  <div id="navbar-container"></div>
 
-    <!-- Main Navigation Header -->
-    <header class="site-header" id="site-header">
-        <div class="container header-container">
-            <!-- Brand Logo -->
-            <a href="#home" class="brand-logo" id="logo-link">
-                <div class="brand-mark">
-                    <span class="brand-title">ROCHELLE</span>
-                    <span class="brand-sub">At Home Studio</span>
-                </div>
+  <main>
+    <!-- SECTION 1: EDITORIAL HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#EFE5DD] dark:bg-[#141012] bg-[url('assets/img/hero-bg.png')] bg-no-repeat bg-right bg-cover" id="home">
+      <!-- Soft Gradient Overlay (Dark Mode Only) -->
+      <div class="absolute inset-0 hidden dark:block bg-gradient-to-r dark:from-[#0F0C0D]/95 dark:via-[#0F0C0D]/80 dark:to-transparent pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-900/60 text-[#BD5579] text-xs font-bold uppercase tracking-widest">
+              <span>WELCOME TO ROCHELLE</span>
+              <i class="fa-solid fa-sparkle"></i>
+            </div>
+
+            <h1 class="font-serif-luxury text-5xl sm:text-6xl lg:text-7xl font-bold uppercase text-[#141010] dark:text-white leading-[0.95] tracking-tight">
+              YOUR HAIR.<br>
+              <span class="text-[#BD5579]">YOUR ERA.</span>
+            </h1>
+
+            <p class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-gray-800 dark:text-gray-300">
+              CUT. COLOR. CONFIDENCE. AT YOUR DOORSTEP.
+            </p>
+            <div class="flex items-center gap-4 flex-wrap pt-2">
+              <a href="public/pages/booking.html" class="inline-flex items-center gap-2 bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] dark:hover:bg-[#BD5579] dark:hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl hover:-translate-y-1 transition duration-300">
+                <span>Book Your Look</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="public/pages/about.html" class="inline-flex items-center gap-2 border-2 border-[#141010] dark:border-white hover:bg-[#141010] hover:text-white dark:hover:bg-white dark:hover:text-[#141010] text-[#141010] dark:text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition duration-300">
+                <span>Our Story</span>
+              </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="inline-flex items-center gap-6 sm:gap-8 pt-5 border-t border-gray-400/40 dark:border-zinc-800 font-sans-clean">
+              <div>
+                <span class="font-sans-clean text-2xl sm:text-3xl font-extrabold text-[#141010] dark:text-white tracking-tight">50k+</span>
+                <span class="block text-[11px] text-[#141010] dark:text-gray-300 font-extrabold uppercase tracking-wider">Home Visits</span>
+              </div>
+              <div class="w-px h-8 bg-gray-400/40 dark:bg-zinc-700"></div>
+              <div>
+                <span class="font-sans-clean text-2xl sm:text-3xl font-extrabold text-[#141010] dark:text-white tracking-tight">4.98 ★</span>
+                <span class="block text-[11px] text-[#141010] dark:text-gray-300 font-extrabold uppercase tracking-wider">Client Rating</span>
+              </div>
+              <div class="w-px h-8 bg-gray-400/40 dark:bg-zinc-700"></div>
+              <div>
+                <span class="font-sans-clean text-2xl sm:text-3xl font-extrabold text-[#141010] dark:text-white tracking-tight">100%</span>
+                <span class="block text-[11px] text-[#141010] dark:text-gray-300 font-extrabold uppercase tracking-wider">Monodose Sealed</span>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY ROCHELLE (TRAINED PROS & LUXURY CONVENIENCE) -->
+    <section class="py-24 bg-white dark:bg-[#141012] border-b border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+            THE PRIVATE SANCTUARY STANDARD
+          </span>
+          <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+            Why Doorstep Luxury Beats Traditional Salons
+          </h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Enjoy undivided 1-on-1 attention with zero commute stress, hospital-grade sanitation, and pristine mobile salon equipment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 hover:shadow-xl hover:-translate-y-1 transition duration-300 space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-800 text-[#BD5579] flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Certified Master Artists</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              500+ hours rigorous training, certified by L'Oréal and MAC, with 100% verified police background clearances.
+            </p>
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#BD5579]">
+              <i class="fa-solid fa-certificate"></i> Top 1% Specialists
+            </span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border-2 border-[#BD5579] shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-[#BD5579] text-white flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-pump-medical"></i>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">100% Sealed Monodose</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              Zero cross-contamination. Single-use sachets opened in front of you with 120°C autoclave UV-sterilized tools.
+            </p>
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-600">
+              <i class="fa-solid fa-shield-virus"></i> Zero Contamination
+            </span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 hover:shadow-xl hover:-translate-y-1 transition duration-300 space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-800 text-[#BD5579] flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Zero-Mess Home Setup</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              We lay waterproof protective sheets, bring ring lighting, and vacuum all stray fibers. Your room is left spotless.
+            </p>
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#BD5579]">
+              <i class="fa-solid fa-broom"></i> Spotless Guarantee
+            </span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 hover:shadow-xl hover:-translate-y-1 transition duration-300 space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-800 text-[#BD5579] flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">Live GPS Arrival Feed</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              Know the exact minute your beautician arrives with real-time map tracking, vehicle plate, and direct call/chat.
+            </p>
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#BD5579]">
+              <i class="fa-solid fa-clock"></i> On-Time Guaranteed
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: POPULAR SERVICES SHOWCASE (DYNAMIC CARDS) -->
+    <section class="py-24 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors" id="services-preview">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div class="space-y-3">
+            <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+              COUTURE SERVICES
+            </span>
+            <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+              Signature Doorstep Treatments
+            </h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 max-w-lg">
+              Explore our most requested home salon services. Each session includes full hygiene protocols and zero travel surcharges.
+            </p>
+          </div>
+          <a href="public/pages/services.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#BD5579] hover:underline">
+            <span>View Full 10+ Treatment Catalog</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="group bg-white dark:bg-[#1A1517] rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="assets/img/skin.jpg" alt="6-Step HydraGlow Facial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 bg-[#141010]/85 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">Top Rated</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow space-y-3">
+              <div class="flex justify-between items-center text-xs text-gray-500">
+                <span><i class="fa-regular fa-clock mr-1"></i> 75 mins</span>
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-star mr-1"></i> 4.99 (512)</span>
+              </div>
+              <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#BD5579] transition">
+                <a href="public/pages/service-details.html?id=hydra-facial">6-Step HydraGlow Radiance Facial</a>
+              </h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed flex-grow">
+                Ultrasonic pore vacuum extraction, antioxidant Vitamin C infusion, and cryo contouring massage.
+              </p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-zinc-800">
+                <span class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">$119</span>
+                <a href="public/pages/service-details.html?id=hydra-facial" class="px-4 py-2 rounded-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] text-xs font-bold transition">
+                  Details & Book
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group bg-white dark:bg-[#1A1517] rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="assets/img/hero.jpg" alt="Moroccan Argan Hair Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 bg-[#141010]/85 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">Bestseller</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow space-y-3">
+              <div class="flex justify-between items-center text-xs text-gray-500">
+                <span><i class="fa-regular fa-clock mr-1"></i> 60 mins</span>
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-star mr-1"></i> 4.98 (342)</span>
+              </div>
+              <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#BD5579] transition">
+                <a href="public/pages/service-details.html?id=hair-spa">Moroccan Argan Hair Spa & Steam</a>
+              </h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed flex-grow">
+                Deep nourishing hot-towel infusion, scalp detoxification massage, and Dyson supersonic blowout.
+              </p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-zinc-800">
+                <span class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">$79</span>
+                <a href="public/pages/service-details.html?id=hair-spa" class="px-4 py-2 rounded-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] text-xs font-bold transition">
+                  Details & Book
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group bg-white dark:bg-[#1A1517] rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="assets/img/bridal.jpg" alt="HD 4K Bridal Glam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-3 left-3 bg-[#BD5579] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">Celebrity Choice</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow space-y-3">
+              <div class="flex justify-between items-center text-xs text-gray-500">
+                <span><i class="fa-regular fa-clock mr-1"></i> 150 mins</span>
+                <span class="font-bold text-amber-500"><i class="fa-solid fa-star mr-1"></i> 5.0 (195)</span>
+              </div>
+              <h3 class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#BD5579] transition">
+                <a href="public/pages/service-details.html?id=bridal-airbrush">HD 4K Airbrush Couture Bridal Glam</a>
+              </h3>
+              <p class="text-xs text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed flex-grow">
+                Waterproof 24-hr airbrush makeup, couture hair updo sculpting, and jewelry/dupatta draping.
+              </p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-zinc-800">
+                <span class="font-serif-luxury text-2xl font-bold text-gray-900 dark:text-white">$289</span>
+                <a href="public/pages/service-details.html?id=bridal-airbrush" class="px-4 py-2 rounded-full bg-[#141010] dark:bg-white text-white dark:text-[#141010] hover:bg-[#BD5579] text-xs font-bold transition">
+                  Details & Book
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 7-POINT SAFE-SALON HYGIENE PROTOCOL -->
+    <section class="py-24 bg-white dark:bg-[#141012] border-y border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+            OUR GOLD BENCHMARK
+          </span>
+          <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+            7-Point Doorstep Safety & Hygiene Protocol
+          </h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            We hold medical-grade safety standards. Your home and wellness are sacred.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">1</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">Single-Use Monodose Kits</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Formulas packaged in tamper-proof sealed single client tubes.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">2</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">120°C Autoclave UV Sterilization</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">All steel tools autoclaved and sealed in blue surgical indicators.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">3</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">100% Disposable Drapes</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Brand-new biodegradable sheets, gowns, and headbands for each visit.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">4</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">Police & Background Checked</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Full identity, address, and criminal background certification.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">5</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">Daily Health Audits</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Daily temperature audits, hand sanitation, and mask requests honored.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-950 text-[#BD5579] flex items-center justify-center font-bold flex-shrink-0">6</div>
+            <div>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white mb-1">Spotless Zero-Mess Guarantee</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Complete vacuuming of all clippings and biowaste containment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: TRANSPARENT PRICING TIERS -->
+    <section class="py-24 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors" id="pricing-preview">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+            TRANSPARENT VALUE
+          </span>
+          <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+            Curated Doorstep Bundles
+          </h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            No surge charges, no travel surcharges. What you see is exactly what you pay.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Plan 1 -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex flex-col space-y-6">
+            <div>
+              <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Express Essentials</span>
+              <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white mt-1">Weekday Glow</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="font-serif-luxury text-5xl font-bold text-gray-900 dark:text-white">$89</span>
+                <span class="text-xs text-gray-500">/ 60 mins session</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs text-gray-600 dark:text-gray-300 flex-grow">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Fruit & Berry Express Cleanup</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Luxe Russian Gel Manicure</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Volumizing Blowdry Finish</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Free Doorstep Travel Included</li>
+            </ul>
+            <a href="public/pages/pricing.html" class="w-full text-center py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold uppercase tracking-wider hover:border-[#BD5579] hover:text-[#BD5579] transition">
+              Book Weekday Glow
             </a>
+          </div>
 
-            <!-- Desktop Nav Links -->
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
-                    <li><a href="#services" class="nav-link" data-nav="services">Services</a></li>
-                    <li><a href="#pricing" class="nav-link" data-nav="pricing">Pricing</a></li>
-                    <li><a href="#how-it-works" class="nav-link" data-nav="how-it-works">How It Works</a></li>
-                    <li><a href="#safety" class="nav-link" data-nav="safety">Safety & Hygiene</a></li>
-                </ul>
-            </nav>
-
-            <!-- Header Action Buttons -->
-            <div class="header-actions">
-                <button class="btn btn-ghost" id="nav-cart-btn">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="badge" id="cart-count">0</span>
-                </button>
-                <button class="btn btn-outline" id="auth-btn">
-                    <i class="fa-regular fa-user"></i>
-                    <span id="user-btn-text">Sign In</span>
-                </button>
-                <button class="btn btn-primary" id="header-book-btn">
-                    <span>Book Your Look</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+          <!-- Plan 2 (Featured) -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1A1517] border-2 border-[#BD5579] shadow-2xl flex flex-col space-y-6 relative transform lg:-translate-y-2">
+            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#BD5579] text-white text-[10px] font-extrabold uppercase tracking-widest px-4 py-1 rounded-full shadow">
+              Most Popular • Save 25%
+            </span>
+            <div>
+              <span class="text-xs font-bold text-[#BD5579] uppercase tracking-widest">Head-to-Toe Spa</span>
+              <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white mt-1">Signature Radiance Luxe</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="font-serif-luxury text-5xl font-bold text-gray-900 dark:text-white">$169</span>
+                <span class="text-xs text-gray-500">/ 120 mins session</span>
+              </div>
             </div>
+            <ul class="space-y-3 text-xs text-gray-600 dark:text-gray-300 flex-grow font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 6-Step HydraGlow Radiance Facial</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Moroccan Argan Hair Spa & Steam</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Russian Gel Mani & Spa Pedicure</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Acupressure Neck & Shoulder Massage</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Sealed Single-Use Monodose Kits</li>
+            </ul>
+            <a href="public/pages/pricing.html" class="w-full text-center py-3.5 rounded-full bg-[#BD5579] hover:bg-[#A33F62] text-white text-xs font-bold uppercase tracking-wider shadow-lg transition">
+              Book Signature Luxe
+            </a>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 flex flex-col space-y-6">
+            <div>
+              <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Bridal & Red Carpet</span>
+              <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white mt-1">Royal Couture Bridal</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="font-serif-luxury text-5xl font-bold text-gray-900 dark:text-white">$349</span>
+                <span class="text-xs text-gray-500">/ 180 mins session</span>
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs text-gray-600 dark:text-gray-300 flex-grow">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> HD 4K Waterproof Airbrush Makeup</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Couture Hair Sculpting & Saree Draping</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> 24K Pure Gold Radiance Facial</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#BD5579]"></i> Celebrity Master Artist Assigned</li>
+            </ul>
+            <a href="public/pages/pricing.html" class="w-full text-center py-3 rounded-full border border-gray-300 dark:border-zinc-700 text-xs font-bold uppercase tracking-wider hover:border-[#BD5579] hover:text-[#BD5579] transition">
+              Book Royal Bridal
+            </a>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- HERO SECTION (Editorial Reference Match) -->
-        <section class="hero-section" id="home" style="max-height: 100vh;">
-            <div class="hero-bg-overlay"></div>
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="hero-tag">
-                        <span>WELCOME TO LUXE</span>
-                        <i class="fa-solid fa-sparkle"></i>
-                    </div>
-
-                    <h1 class="hero-headline">
-                        YOUR HAIR.<br>
-                        <span class="text-blush">YOUR ERA.</span>
-                    </h1>
-
-                    <p class="hero-subline">CUT. COLOR. CONFIDENCE. AT YOUR DOORSTEP.</p>
-
-                    <div class="hero-actions">
-                        <button class="btn btn-hero" id="hero-book-btn">
-                            <span>BOOK YOUR LOOK</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                        <button class="btn btn-hero-secondary" id="hero-explore-btn">
-                            <span>EXPLORE SERVICES</span>
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="hero-visual">
-                    <div class="hero-image-wrapper">
-                        <img src="assets/hero.jpg" alt="LUXE Editorial Hair and Beauty Model" class="hero-main-img"
-                            id="hero-img">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- HIGHLIGHT SECTION: TRAINED PROFESSIONALS & LUXURY CONVENIENCE -->
-        <section class="section highlight-section" id="highlights">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">WHY LUXE AT HOME</span>
-                    <h2 class="section-title">The Private Sanctuary Salon Experience</h2>
-                    <p class="section-subtitle">Why thousands of discerning clients are switching from traditional
-                        salons to our doorstep master artists.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon-box">
-                            <i class="fa-solid fa-user-check"></i>
-                        </div>
-                        <h3>Certified Master Therapists</h3>
-                        <p>Our beauticians undergo 500+ hours of rigorous training, brand masterclasses (L'Oréal,
-                            Kérastase, MAC), and 100% police background vetting.</p>
-                        <span class="feature-pill"><i class="fa-solid fa-circle-check"></i> Top 1% Talent Hired</span>
-                    </div>
-
-                    <div class="feature-card highlighted-feature">
-                        <div class="feature-icon-box">
-                            <i class="fa-solid fa-pump-soap"></i>
-                        </div>
-                        <h3>Hospital-Grade Monodose Kits</h3>
-                        <p>Zero cross-contamination. Every product is individually sealed in single-use sachets and
-                            opened in front of you with 120°C UV-sterilized tools.</p>
-                        <span class="feature-pill"><i class="fa-solid fa-shield"></i> 100% Sealed Monodose</span>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon-box">
-                            <i class="fa-solid fa-couch"></i>
-                        </div>
-                        <h3>Complete Doorstep Setup</h3>
-                        <p>We bring plush salon chairs, ambient ring lights, waterproof protective floor draping, and
-                            leave your home spotless after service.</p>
-                        <span class="feature-pill"><i class="fa-solid fa-broom"></i> Zero-Mess Guarantee</span>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon-box">
-                            <i class="fa-solid fa-satellite-dish"></i>
-                        </div>
-                        <h3>Live GPS Arrival Tracking</h3>
-                        <p>Know exactly when your beautician departs and arrives with our real-time GPS map, driver
-                            details, and contact gateway.</p>
-                        <span class="feature-pill"><i class="fa-solid fa-bolt"></i> On-Time Guaranteed</span>
-                    </div>
-                </div>
-
-                <!-- Doorstep Expert Showcase Banner -->
-                <div class="expert-banner">
-                    <div class="expert-banner-img">
-                        <img src="assets/expert.jpg" alt="LUXE Doorstep Beauty Expert arriving with sterilized kit">
-                        <div class="expert-experience-tag">
-                            <i class="fa-solid fa-award"></i>
-                            <div>
-                                <strong>Sophia Vance</strong>
-                                <span>Master Esthetician • 4.99★</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="expert-banner-text">
-                        <span class="section-badge">AT YOUR DOORSTEP</span>
-                        <h2>Salon Luxury Brought Directly To Your Living Room</h2>
-                        <p>Say goodbye to parking hassles, waiting room delays, and post-treatment traffic. Enjoy
-                            relaxing treatments while your favorite music plays in your own private comfort.</p>
-                        <ul class="expert-perks">
-                            <li><i class="fa-solid fa-check"></i> Full mobile salon workstation with ergonomic equipment
-                            </li>
-                            <li><i class="fa-solid fa-check"></i> Medical-grade PPE, disposable gowns & sanitized
-                                slippers</li>
-                            <li><i class="fa-solid fa-check"></i> 100% authentic premium brand formulations</li>
-                            <li><i class="fa-solid fa-check"></i> Transparent pricing with zero hidden travel charges
-                            </li>
-                        </ul>
-                        <div class="expert-banner-actions">
-                            <button class="btn btn-primary" onclick="app.openBookingModal()">Book a Specialist</button>
-                            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES CATALOG SECTION (CATEGORIZED: HAIR, SKIN, NAILS, BRIDAL) -->
-        <section class="section services-section" id="services">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">TREATMENT MENU</span>
-                    <h2 class="section-title">Couture Services By Category</h2>
-                    <p class="section-subtitle">Handcrafted treatments designed for luxury home pampering. Filter by
-                        category or search below.</p>
-                </div>
-
-                <!-- Category Filters -->
-                <div class="services-nav-tabs">
-                    <button class="service-tab-btn active" data-category="all">
-                        <i class="fa-solid fa-layer-group"></i> All Services
-                    </button>
-                    <button class="service-tab-btn" data-category="hair">
-                        <i class="fa-solid fa-scissors"></i> Hair Couture
-                    </button>
-                    <button class="service-tab-btn" data-category="skin">
-                        <i class="fa-solid fa-spa"></i> Skin & Glow
-                    </button>
-                    <button class="service-tab-btn" data-category="nails">
-                        <i class="fa-solid fa-hand-sparkles"></i> Nails & Pedicure
-                    </button>
-                    <button class="service-tab-btn" data-category="bridal">
-                        <i class="fa-solid fa-crown"></i> Bridal & Glam
-                    </button>
-                </div>
-
-                <!-- Search and Filter Tools -->
-                <div class="services-filter-bar">
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="service-search-input"
-                            placeholder="Search treatments (e.g. Keratin, HydraFacial, Gel Nails, Bridal HD)...">
-                    </div>
-                    <div class="filter-dropdowns">
-                        <select id="duration-filter">
-                            <option value="all">Any Duration</option>
-                            <option value="quick">Under 45 mins</option>
-                            <option value="standard">45 - 90 mins</option>
-                            <option value="luxury">90+ mins</option>
-                        </select>
-                        <select id="price-filter">
-                            <option value="all">Sort By</option>
-                            <option value="price-asc">Price: Low to High</option>
-                            <option value="price-desc">Price: High to Low</option>
-                            <option value="popular">Most Popular</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Dynamic Services Grid -->
-                <div class="services-grid" id="services-grid">
-                    <!-- Populated dynamically by app.js -->
-                </div>
-
-                <div class="services-cta-banner">
-                    <div class="cta-banner-content">
-                        <i class="fa-solid fa-gift cta-icon"></i>
-                        <div>
-                            <h3>Looking for Custom Group or Wedding Bookings?</h3>
-                            <p>We provide full mobile salon squads for bachelorettes, bridal parties, and private
-                                corporate glam.</p>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" onclick="app.openCustomPackageModal()">Customize Group
-                        Package</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRICING & BUNDLE BUILDER SECTION -->
-        <section class="section pricing-section" id="pricing">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">TRANSPARENT PRICING</span>
-                    <h2 class="section-title">Curated Value Bundles & Packages</h2>
-                    <p class="section-subtitle">No hidden fees, no surge costs, zero travel charges. What you see is
-                        exactly what you pay at your doorstep.</p>
-                </div>
-
-                <!-- Pricing Cards Grid -->
-                <div class="pricing-grid">
-                    <!-- Tier 1 -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="tier-pill">EXPRESS ESSENTIALS</span>
-                            <h3 class="tier-title">The Weekday Glow</h3>
-                            <div class="tier-price">
-                                <span class="currency">$</span>
-                                <span class="amount">89</span>
-                                <span class="period">/ session</span>
-                            </div>
-                            <p class="tier-desc">Ideal for a quick maintenance refresh before your workweek or weekend
-                                dinner.</p>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fa-solid fa-check"></i> Express Radiant Fruit & Berry Cleanup</li>
-                            <li><i class="fa-solid fa-check"></i> Luxe Manicure with OPI Polish</li>
-                            <li><i class="fa-solid fa-check"></i> Blowdry & High-Gloss Hair Serum</li>
-                            <li><i class="fa-solid fa-check"></i> Sealed Monodose Kit included</li>
-                            <li><i class="fa-solid fa-check"></i> Estimated duration: 60 mins</li>
-                        </ul>
-                        <button class="btn btn-outline tier-btn" onclick="app.selectPackage('Weekday Glow', 89)">Book
-                            Weekday Glow</button>
-                    </div>
-
-                    <!-- Tier 2 (Featured) -->
-                    <div class="pricing-card featured-pricing">
-                        <div class="popular-ribbon">MOST POPULAR • SAVE 25%</div>
-                        <div class="pricing-header">
-                            <span class="tier-pill tier-pill-gold">HEAD-TO-TOE SPA</span>
-                            <h3 class="tier-title">Signature Radiance Luxe</h3>
-                            <div class="tier-price">
-                                <span class="currency">$</span>
-                                <span class="amount">169</span>
-                                <span class="period">/ session</span>
-                            </div>
-                            <p class="tier-desc">Our bestselling complete top-to-bottom transformation in your living
-                                room.</p>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fa-solid fa-check"></i> <strong>HydraGlow Vitamin C Facial</strong> (6-Step)
-                            </li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Moroccan Argan Hair Spa & Steam</strong></li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Gel Manicure & Ice Cream Pedicure</strong>
-                            </li>
-                            <li><i class="fa-solid fa-check"></i> <strong>Relaxing Head, Neck & Shoulder
-                                    Massage</strong></li>
-                            <li><i class="fa-solid fa-check"></i> Full Single-Use Kit + Clean-up Included</li>
-                            <li><i class="fa-solid fa-check"></i> Estimated duration: 120 mins</li>
-                        </ul>
-                        <button class="btn btn-primary tier-btn"
-                            onclick="app.selectPackage('Signature Radiance Luxe', 169)">Book Signature Luxe</button>
-                    </div>
-
-                    <!-- Tier 3 -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="tier-pill">BRIDAL & RED CARPET</span>
-                            <h3 class="tier-title">Royal Couture Bridal</h3>
-                            <div class="tier-price">
-                                <span class="currency">$</span>
-                                <span class="amount">349</span>
-                                <span class="period">/ package</span>
-                            </div>
-                            <p class="tier-desc">Master bridal artists with HD Airbrush, hair couture, and luxury
-                                pre-wedding glow.</p>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fa-solid fa-check"></i> HD 4K Waterproof Airbrush Bridal Makeup</li>
-                            <li><i class="fa-solid fa-check"></i> Luxury Hair Couture, Extensions & Draping</li>
-                            <li><i class="fa-solid fa-check"></i> 24K Gold Pre-Bridal Radiance Facial</li>
-                            <li><i class="fa-solid fa-check"></i> Chrome Gel Nail Art & Luxury Pedicure</li>
-                            <li><i class="fa-solid fa-check"></i> Senior Celebrity Master Artist assigned</li>
-                        </ul>
-                        <button class="btn btn-outline tier-btn"
-                            onclick="app.selectPackage('Royal Couture Bridal', 349)">Book Bridal Couture</button>
-                    </div>
-                </div>
-
-                <!-- Interactive Custom Package Calculator -->
-                <div class="custom-calc-card">
-                    <div class="calc-header">
-                        <div>
-                            <span class="section-badge">INTERACTIVE CALCULATOR</span>
-                            <h3>Build Your Custom Doorstep Bundle</h3>
-                            <p>Select multiple services to unlock instant automatic tier discounts!</p>
-                        </div>
-                        <div class="calc-discount-badge" id="bundle-discount-badge">
-                            <i class="fa-solid fa-tags"></i> <span>Add 2+ items to unlock 15% OFF</span>
-                        </div>
-                    </div>
-
-                    <div class="calc-options-grid" id="calc-checkbox-container">
-                        <!-- Dynamic checklist populated by app.js -->
-                    </div>
-
-                    <div class="calc-summary-bar">
-                        <div class="calc-total-box">
-                            <span class="calc-lbl">Estimated Session Time: <strong id="calc-total-duration">0
-                                    mins</strong></span>
-                            <div class="price-display">
-                                <span class="calc-orig-price" id="calc-orig-price"></span>
-                                <span class="calc-final-price" id="calc-final-price">$0</span>
-                                <span class="calc-savings" id="calc-savings"></span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" id="book-custom-bundle-btn" disabled>
-                            <span>Book Selected Bundle</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- HOW IT WORKS SECTION -->
-        <section class="section how-it-works-section" id="how-it-works">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">SEAMLESS PROCESS</span>
-                    <h2 class="section-title">How LUXE Doorstep Service Works</h2>
-                    <p class="section-subtitle">From booking to glowing in 4 effortless steps.</p>
-                </div>
-
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-badge">01</div>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-calendar-check"></i>
-                        </div>
-                        <h3>Select & Schedule</h3>
-                        <p>Choose your treatments from our curated menu, pick your preferred date & time slot, and enter
-                            your doorstep address.</p>
-                        <div class="step-timeline-tag"><i class="fa-regular fa-clock"></i> 2 min booking</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-badge">02</div>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-route"></i>
-                        </div>
-                        <h3>Track Beautician Arrival</h3>
-                        <p>Receive your certified specialist's profile, credentials, vehicle details, and watch their
-                            live GPS arrival in real-time.</p>
-                        <div class="step-timeline-tag"><i class="fa-solid fa-map-location-dot"></i> Live GPS map</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-badge">03</div>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-spa"></i>
-                        </div>
-                        <h3>VIP Home Pampering</h3>
-                        <p>Your artist arrives with sanitized single-use kits, sets up protective covers, and delivers
-                            5-star salon indulgence.</p>
-                        <div class="step-timeline-tag"><i class="fa-solid fa-shield-virus"></i> Monodose kits</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-badge">04</div>
-                        <div class="step-icon">
-                            <i class="fa-solid fa-sparkles"></i>
-                        </div>
-                        <h3>Spotless Clean & Glow</h3>
-                        <p>We pack everything up and leave your room sparkling clean. Enjoy contactless cashless
-                            checkout and rate your experience.</p>
-                        <div class="step-timeline-tag"><i class="fa-solid fa-wand-magic"></i> Zero mess left</div>
-                    </div>
-                </div>
-
-                <!-- Interactive Journey Simulator Preview -->
-                <div class="journey-preview-card">
-                    <div class="journey-left">
-                        <span class="section-badge">INTERACTIVE DEMO</span>
-                        <h3>Experience The Arrival Flow Right Now</h3>
-                        <p>Curious how you track your beautician and monitor the sanitized setup? Launch our interactive
-                            live tracker simulation!</p>
-                        <button class="btn btn-primary" id="launch-demo-tracker-btn">
-                            <i class="fa-solid fa-satellite"></i> Launch Live Tracker Demo
-                        </button>
-                    </div>
-                    <div class="journey-right">
-                        <div class="mock-tracker-preview">
-                            <div class="mock-header">
-                                <span class="mock-dot green"></span>
-                                <span class="mock-status-text">Artist En Route (8 mins away)</span>
-                            </div>
-                            <div class="mock-driver">
-                                <img src="assets/expert.jpg" alt="Sophia Vance" class="mock-avatar">
-                                <div>
-                                    <strong>Sophia Vance</strong>
-                                    <span>Master Hair & Skin Expert (4.98★)</span>
-                                </div>
-                                <span class="mock-call-icon"><i class="fa-solid fa-phone"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SAFETY & HYGIENE PROTOCOL SECTION -->
-        <section class="section safety-section" id="safety">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">OUR GOLD STANDARD</span>
-                    <h2 class="section-title">7-Point Doorstep Safety & Hygiene Protocol</h2>
-                    <p class="section-subtitle">We hold the highest hygiene benchmarks in the beauty industry. Your
-                        wellness and safety are never compromised.</p>
-                </div>
-
-                <div class="safety-grid">
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-box-open"></i></div>
-                        <div class="safety-text">
-                            <h4>1. Single-Use Monodose Kits</h4>
-                            <p>All facials, hair masks, and scrubs come in individually sealed, single-use sachets
-                                opened right in front of your eyes.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-                        <div class="safety-text">
-                            <h4>2. Hospital-Grade UV Sterilization</h4>
-                            <p>Scissors, tweezers, and cuticle pushers are pre-sterilized at 120°C and sealed in medical
-                                grade indicator pouches.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-shirt"></i></div>
-                        <div class="safety-text">
-                            <h4>3. 100% Disposable Drapes & Towels</h4>
-                            <p>We provide brand new biodegradable bedsheets, gowns, hair bands, and floor mats for each
-                                client session.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-id-card"></i></div>
-                        <div class="safety-text">
-                            <h4>4. 100% Police Verified & Screened</h4>
-                            <p>Every artist undergoes comprehensive criminal background verification, address
-                                validation, and identity security checks.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-mask-face"></i></div>
-                        <div class="safety-text">
-                            <h4>5. Daily Health & Hygiene Audits</h4>
-                            <p>Therapists maintain strict daily temperature checks, sanitized kit inspections, and
-                                double-masking upon request.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-award"></i></div>
-                        <div class="safety-text">
-                            <h4>6. 100% Authentic Brand Formulations</h4>
-                            <p>Direct sourcing guarantees genuine products from L'Oréal Professionnel, Kérastase, OPI,
-                                O3+, and Dyson Pro.</p>
-                        </div>
-                    </div>
-
-                    <div class="safety-item">
-                        <div class="safety-icon"><i class="fa-solid fa-sparkles"></i></div>
-                        <div class="safety-text">
-                            <h4>7. Spotless Zero-Mess Promise</h4>
-                            <p>Our specialists clean, vacuum clippings/residues, and dispose of all materials in
-                                bio-friendly waste bags.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hygiene Certificate Modal Trigger -->
-                <div class="safety-cert-box">
-                    <div class="cert-left">
-                        <i class="fa-solid fa-certificate cert-badge-icon"></i>
-                        <div>
-                            <h3>Verified Safe-Salon™ Certification</h3>
-                            <p>Inspect our mobile kit sterilization checklists, product expiration verification, and
-                                beautician health certificates.</p>
-                        </div>
-                    </div>
-                    <button class="btn btn-outline" id="view-cert-btn">
-                        <i class="fa-solid fa-file-shield"></i> View Safety Certifications
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- CLIENT TESTIMONIALS & REVIEWS -->
-        <section class="section reviews-section" id="reviews">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">LOVED BY 50,000+ CLIENTS</span>
-                    <h2 class="section-title">Real Doorstep Transformations</h2>
-                    <p class="section-subtitle">Read why busy professionals, mothers, and brides trust LUXE for their
-                        private beauty routines.</p>
-                </div>
-
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-quote">"As a mother of twins, getting to a salon was impossible. Having Sophia
-                            arrive at my doorstep with a sanitized kit, hot towels, and giving me the best HydraFacial
-                            was pure heaven!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">EG</div>
-                            <div>
-                                <strong>Elena Gallagher</strong>
-                                <span>Beverly Hills • Booked HydraGlow Facial</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-quote">"The live tracker is fantastic! I could see exactly when my stylist was
-                            10 mins away. She set up her ring light, did an amazing Kérastase blowout, and left the room
-                            immaculate."</p>
-                        <div class="review-author">
-                            <div class="author-avatar">MC</div>
-                            <div>
-                                <strong>Maya Chen</strong>
-                                <span>Manhattan • Booked Hair Spa & Blowout</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-quote">"We booked LUXE for my sister's bridal party at our home. 3 master
-                            artists arrived on time with flawless HD airbrush gear. We felt like Hollywood stars without
-                            leaving the living room!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">SR</div>
-                            <div>
-                                <strong>Sarah Rodriguez</strong>
-                                <span>Miami • Booked Royal Bridal Glam</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ SECTION -->
-        <section class="section faq-section" id="faq">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">FREQUENTLY ASKED</span>
-                    <h2 class="section-title">Everything You Need To Know</h2>
-                    <p class="section-subtitle">Clear answers to your doorstep beauty questions.</p>
-                </div>
-
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What do I need to provide for the beautician?</span>
-                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Nothing except a normal power outlet, comfortable seating, and access to a
-                                washbasin/water if booking hair washing or facial treatments. Our artists bring all
-                                protective floor sheets, professional lighting, towels, sanitized tools, and disposable
-                                waste bags.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How does the live beautician arrival tracking work?</span>
-                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Once your appointment is confirmed, you can open your live tracker in our portal. You
-                                will see your assigned therapist's name, photo, certifications, vehicle model, and
-                                real-time GPS location on the map with estimated arrival countdown.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Are there any travel charges or doorstep convenience fees?</span>
-                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>No! LUXE has zero hidden fees. Travel, single-use kit costs, and post-service cleanup are
-                                100% included in the displayed service prices for all locations within our service
-                                zones.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How do you guarantee product safety and hygiene?</span>
-                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We use 100% single-use sealed monodose sachets for skincare and haircare, opened in front
-                                of you. Metal tools are autoclaved and UV sterilized in sealed indicator pouches, and
-                                all linen/gowns are brand-new disposables.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER CTA -->
-        <section class="footer-cta-section">
-            <div class="container text-center">
-                <span class="section-badge">READY TO GLOW?</span>
-                <h2 class="cta-title">Bring 5-Star Salon Luxury To Your Doorstep Today</h2>
-                <p class="cta-desc">Join over 50,000 delighted clients. Book your certified home beautician in under 2
-                    minutes.</p>
-                <div class="cta-buttons">
-                    <button class="btn btn-hero" onclick="app.openBookingModal()">
-                        <span>BOOK HOME APPOINTMENT</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <button class="btn btn-outline-white" id="footer-track-btn">
-                        <i class="fa-solid fa-location-arrow"></i> Track Existing Booking
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- SITE FOOTER -->
-    <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-brand-col">
-                <div class="brand-mark">
-                    <span class="brand-title">LUXE</span>
-                    <span class="brand-sub">At Home Studio</span>
-                </div>
-                <p class="footer-tagline">Couture doorstep beauty & wellness experiences delivered by certified master
-                    therapists.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-links-col">
-                <h4>Doorstep Services</h4>
-                <ul>
-                    <li><a href="#services" onclick="app.filterCategory('hair')">Hair Couture & Spa</a></li>
-                    <li><a href="#services" onclick="app.filterCategory('skin')">HydraFacials & Glow</a></li>
-                    <li><a href="#services" onclick="app.filterCategory('nails')">Gel Nails & Art</a></li>
-                    <li><a href="#services" onclick="app.filterCategory('bridal')">Bridal & Red Carpet</a></li>
-                    <li><a href="#pricing">Value Packages</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-links-col">
-                <h4>Company & Safety</h4>
-                <ul>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#safety">Hygiene & Safety Protocol</a></li>
-                    <li><a href="#highlights">Verified Artists</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#" onclick="app.openAuthModal()">Customer Portal</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact-col">
-                <h4>Customer Concierge</h4>
-                <p><i class="fa-solid fa-phone"></i> +1 (800) 589-LUXE</p>
-                <p><i class="fa-solid fa-envelope"></i> concierge@luxeathome.com</p>
-                <p><i class="fa-solid fa-clock"></i> 7 Days a week: 7:00 AM - 10:00 PM</p>
-                <div class="secure-checkout-badge">
-                    <i class="fa-solid fa-lock"></i> 256-Bit SSL Encrypted Booking
-                </div>
-            </div>
+    <!-- SECTION 6: CLIENT REVIEWS -->
+    <section class="py-24 bg-white dark:bg-[#141012] border-t border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+            REAL TESTIMONIALS
+          </span>
+          <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+            Loved by 50,000+ Discerning Clients
+          </h2>
         </div>
 
-        <div class="footer-bottom">
-            <div class="container footer-bottom-inner">
-                <p>© 2026 LUXE At-Home Studio Inc. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Hygiene Guarantee</a>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 space-y-4">
+            <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="text-xs text-gray-600 dark:text-gray-300 italic leading-relaxed">
+              "As a mother of twins, getting to a salon was impossible. Having Sophia arrive at my doorstep with a sanitized kit and giving me the best HydraFacial was pure heaven!"
+            </p>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-pink-200 dark:bg-zinc-700 font-bold text-xs flex items-center justify-center text-[#BD5579]">EG</div>
+              <div>
+                <h4 class="text-xs font-bold text-gray-900 dark:text-white">Elena Gallagher</h4>
+                <p class="text-[10px] text-gray-400">Beverly Hills • Booked HydraGlow</p>
+              </div>
             </div>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 space-y-4">
+            <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="text-xs text-gray-600 dark:text-gray-300 italic leading-relaxed">
+              "The live GPS tracker was fantastic! I could see exactly when my stylist was 10 mins away. She set up her ring light, did an amazing Kérastase blowout, and left the room spotless."
+            </p>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-pink-200 dark:bg-zinc-700 font-bold text-xs flex items-center justify-center text-[#BD5579]">MC</div>
+              <div>
+                <h4 class="text-xs font-bold text-gray-900 dark:text-white">Maya Chen</h4>
+                <p class="text-[10px] text-gray-400">Manhattan • Booked Hair Spa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 space-y-4">
+            <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="text-xs text-gray-600 dark:text-gray-300 italic leading-relaxed">
+              "We booked ROCHELLE for my sister's bridal party. 3 master artists arrived on time with flawless HD airbrush gear. We felt like Hollywood stars without leaving our living room!"
+            </p>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-pink-200 dark:bg-zinc-700 font-bold text-xs flex items-center justify-center text-[#BD5579]">SR</div>
+              <div>
+                <h4 class="text-xs font-bold text-gray-900 dark:text-white">Sarah Rodriguez</h4>
+                <p class="text-[10px] text-gray-400">Miami • Booked Bridal Package</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- ==================== MODALS & INTERACTIVE PORTALS ==================== -->
-
-    <!-- 1. LIVE BEAUTICIAN ARRIVAL TRACKER MODAL -->
-    <div class="modal-overlay" id="tracker-modal">
-        <div class="modal-card tracker-modal-card">
-            <div class="modal-header">
-                <div class="tracker-header-title">
-                    <span class="live-dot-pulse"></span>
-                    <div>
-                        <h3>Live Beautician Arrival Tracker</h3>
-                        <span class="order-id" id="tracking-order-id">Booking #LX-9428 • Scheduled for Today</span>
-                    </div>
-                </div>
-                <button class="modal-close-btn" onclick="app.closeModal('tracker-modal')">&times;</button>
-            </div>
-
-            <div class="tracker-body">
-                <!-- Live GPS Map Simulation -->
-                <div class="tracker-map-wrapper">
-                    <div class="simulated-map" id="simulated-map">
-                        <!-- SVG Map Canvas -->
-                        <svg class="map-svg" viewBox="0 0 600 300">
-                            <!-- Roads -->
-                            <path d="M 50 150 Q 200 80, 350 180 T 550 120" stroke="#E5D9D4" stroke-width="16"
-                                fill="none" stroke-linecap="round" />
-                            <path d="M 120 40 L 120 260" stroke="#E5D9D4" stroke-width="12" fill="none"
-                                stroke-linecap="round" />
-                            <path d="M 450 40 L 450 260" stroke="#E5D9D4" stroke-width="12" fill="none"
-                                stroke-linecap="round" />
-                            <path d="M 50 150 Q 200 80, 350 180 T 550 120" stroke="#ECA1A6" stroke-width="6"
-                                stroke-dasharray="8 6" fill="none" class="route-line" />
-
-                            <!-- Customer House Marker -->
-                            <g transform="translate(540, 110)">
-                                <circle cx="0" cy="0" r="18" fill="#181212" />
-                                <circle cx="0" cy="0" r="8" fill="#ECA1A6" />
-                                <text x="0" y="32" font-size="11" font-weight="700" fill="#181212"
-                                    text-anchor="middle">Your Doorstep</text>
-                            </g>
-
-                            <!-- Beautician Vehicle / Moving Marker -->
-                            <g id="map-moving-marker" transform="translate(240, 115)">
-                                <circle cx="0" cy="0" r="22" fill="rgba(236, 161, 166, 0.3)"
-                                    class="marker-pulse-ring" />
-                                <circle cx="0" cy="0" r="16" fill="#ECA1A6" />
-                                <text x="0" y="5" font-family="FontAwesome" font-size="14" fill="#FFFFFF"
-                                    text-anchor="middle">&#xf1ba;</text>
-                                <rect x="-45" y="-38" width="90" height="22" rx="4" fill="#181212" />
-                                <text x="0" y="-23" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle"
-                                    id="map-eta-label">8 mins away</text>
-                            </g>
-                        </svg>
-
-                        <!-- Map Overlay Card -->
-                        <div class="map-eta-card">
-                            <div class="eta-big-text">
-                                <span class="eta-num" id="live-eta-minutes">8</span>
-                                <span class="eta-unit">MINS</span>
-                            </div>
-                            <div class="eta-details">
-                                <strong>Estimated Doorstep Arrival</strong>
-                                <span id="live-eta-clock">02:14 PM • Traffic is clear</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Arrival Status Timeline Stepper -->
-                <div class="tracker-stepper">
-                    <div class="stepper-step completed" id="step-confirmed">
-                        <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-                        <span class="step-name">Confirmed</span>
-                    </div>
-                    <div class="stepper-line active" id="line-1"></div>
-                    <div class="stepper-step completed" id="step-sanitized">
-                        <div class="step-circle"><i class="fa-solid fa-pump-medical"></i></div>
-                        <span class="step-name">Kit Sterilized</span>
-                    </div>
-                    <div class="stepper-line active" id="line-2"></div>
-                    <div class="stepper-step current" id="step-enroute">
-                        <div class="step-circle"><i class="fa-solid fa-car-side"></i></div>
-                        <span class="step-name">En Route</span>
-                    </div>
-                    <div class="stepper-line" id="line-3"></div>
-                    <div class="stepper-step" id="step-arrived">
-                        <div class="step-circle"><i class="fa-solid fa-door-open"></i></div>
-                        <span class="step-name">At Doorstep</span>
-                    </div>
-                    <div class="stepper-line" id="line-4"></div>
-                    <div class="stepper-step" id="step-session">
-                        <div class="step-circle"><i class="fa-solid fa-spa"></i></div>
-                        <span class="step-name">Session In Progress</span>
-                    </div>
-                </div>
-
-                <!-- Assigned Specialist Profile Card -->
-                <div class="specialist-tracker-card">
-                    <img src="assets/expert.jpg" alt="Sophia Vance" class="specialist-avatar">
-                    <div class="specialist-info">
-                        <div class="specialist-badge"><i class="fa-solid fa-certificate"></i> Certified Master Artist
-                        </div>
-                        <h4>Sophia Vance</h4>
-                        <p><i class="fa-solid fa-star star-filled"></i> <strong>4.99</strong> (842 sessions) • 7 Yrs Exp
-                        </p>
-                        <p class="specialist-car"><i class="fa-solid fa-car"></i> Rose-Gold Mini Cooper (CA • 8XYZ42)
-                        </p>
-                    </div>
-                    <div class="specialist-actions">
-                        <button class="btn btn-call" id="call-stylist-btn" onclick="app.simulateCall()"><i
-                                class="fa-solid fa-phone"></i> Call</button>
-                        <button class="btn btn-chat" id="chat-stylist-btn" onclick="app.simulateChat()"><i
-                                class="fa-solid fa-message"></i> Message</button>
-                    </div>
-                </div>
-
-                <!-- Safety Checklist for this Arrival -->
-                <div class="tracker-safety-box">
-                    <h5><i class="fa-solid fa-shield-halved"></i> Pre-Arrival Sterilization Checklist</h5>
-                    <div class="checklist-items">
-                        <span class="check-item"><i class="fa-solid fa-circle-check"></i> Sealed Monodose Kit
-                            #LX-881</span>
-                        <span class="check-item"><i class="fa-solid fa-circle-check"></i> Autoclave UV Pouches
-                            Verified</span>
-                        <span class="check-item"><i class="fa-solid fa-circle-check"></i> Temperature: 98.4°F
-                            (Normal)</span>
-                        <span class="check-item"><i class="fa-solid fa-circle-check"></i> Disposable Gowns & Mats
-                            Packed</span>
-                    </div>
-                </div>
-
-                <!-- Interactive Simulation Speed Controller -->
-                <div class="tracker-sim-controls">
-                    <span>Simulation Mode:</span>
-                    <button class="btn-chip" onclick="app.simulateArrivalStep('enroute')">En Route</button>
-                    <button class="btn-chip" onclick="app.simulateArrivalStep('arrived')">Simulate Arrived at
-                        Door</button>
-                    <button class="btn-chip" onclick="app.simulateArrivalStep('session')">Start Session</button>
-                    <button class="btn-chip" onclick="app.simulateArrivalStep('completed')">Complete Session</button>
-                </div>
-            </div>
+    <!-- SECTION 7: FAQ ACCORDION -->
+    <section class="py-24 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors" id="faq-preview">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">
+            GOT QUESTIONS?
+          </span>
+          <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+            Frequently Asked
+          </h2>
         </div>
-    </div>
 
-    <!-- 2. BOOKING WIZARD MODAL -->
-    <div class="modal-overlay" id="booking-modal">
-        <div class="modal-card booking-modal-card">
-            <div class="modal-header">
-                <div class="booking-wizard-steps">
-                    <span class="wizard-step-indicator active" id="wiz-ind-1">1. Services</span>
-                    <span class="wizard-chevron"><i class="fa-solid fa-chevron-right"></i></span>
-                    <span class="wizard-step-indicator" id="wiz-ind-2">2. Schedule</span>
-                    <span class="wizard-chevron"><i class="fa-solid fa-chevron-right"></i></span>
-                    <span class="wizard-step-indicator" id="wiz-ind-3">3. Address</span>
-                    <span class="wizard-chevron"><i class="fa-solid fa-chevron-right"></i></span>
-                    <span class="wizard-step-indicator" id="wiz-ind-4">4. Confirm</span>
-                </div>
-                <button class="modal-close-btn" onclick="app.closeModal('booking-modal')">&times;</button>
-            </div>
+        <div class="space-y-4">
+          <details class="group p-6 rounded-2xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 open:border-[#BD5579] transition">
+            <summary class="flex justify-between items-center font-bold text-sm sm:text-base text-gray-900 dark:text-white cursor-pointer list-none">
+              <span>What do I need to prepare before the beautician arrives?</span>
+              <i class="fa-solid fa-plus group-open:rotate-45 text-[#BD5579] transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              Nothing except a normal electrical power outlet, comfortable seating, and access to a washbasin/water if booking hair or facial treatments. We bring all protective floor draping, portable lighting, and sterile single-use kits.
+            </p>
+          </details>
 
-            <div class="modal-body booking-modal-body">
-                <!-- Step 1: Services Selection -->
-                <div class="wizard-pane active" id="wiz-pane-1">
-                    <h3>Choose Your Doorstep Treatments</h3>
-                    <p class="pane-subtitle">Select one or multiple services. We bundle them into a single relaxing home
-                        session.</p>
+          <details class="group p-6 rounded-2xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 open:border-[#BD5579] transition">
+            <summary class="flex justify-between items-center font-bold text-sm sm:text-base text-gray-900 dark:text-white cursor-pointer list-none">
+              <span>How does live beautician arrival tracking work?</span>
+              <i class="fa-solid fa-plus group-open:rotate-45 text-[#BD5579] transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              Once your booking is confirmed, open your User Dashboard or click Track Stylist in the navbar. You will see a live GPS map with your assigned specialist’s photo, rating, vehicle license plate, and real-time ETA countdown.
+            </p>
+          </details>
 
-                    <div class="booking-service-picker" id="booking-service-picker">
-                        <!-- Dynamic services list populated by app.js -->
-                    </div>
-                </div>
-
-                <!-- Step 2: Schedule & Time -->
-                <div class="wizard-pane" id="wiz-pane-2">
-                    <h3>Pick Date & Preferred Arrival Time</h3>
-                    <p class="pane-subtitle">Our beauticians arrive promptly within a 15-minute preparation window.</p>
-
-                    <div class="schedule-form-grid">
-                        <div class="form-group">
-                            <label><i class="fa-regular fa-calendar-days"></i> Select Date</label>
-                            <input type="date" id="booking-date-field" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fa-regular fa-clock"></i> Select Time Window</label>
-                            <div class="time-slot-grid" id="time-slot-grid">
-                                <button type="button" class="slot-pill" data-time="09:00 AM">09:00 AM</button>
-                                <button type="button" class="slot-pill" data-time="10:30 AM">10:30 AM</button>
-                                <button type="button" class="slot-pill active" data-time="01:00 PM">01:00 PM</button>
-                                <button type="button" class="slot-pill" data-time="03:30 PM">03:30 PM</button>
-                                <button type="button" class="slot-pill" data-time="05:30 PM">05:30 PM</button>
-                                <button type="button" class="slot-pill" data-time="07:30 PM">07:30 PM</button>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-user-sparkle"></i> Specialist Preference</label>
-                            <select id="booking-artist-pref" class="form-control">
-                                <option value="auto">Auto-assign top rated available Master Artist (Recommended)
-                                </option>
-                                <option value="sophia">Sophia Vance (Master Esthetician & Hair Stylist)</option>
-                                <option value="clara">Clara Moreau (Senior Skin & Bridal Makeup Specialist)</option>
-                                <option value="nadia">Nadia Al-Mansoor (Senior Nail Artist & Spa Master)</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3: Address & Doorstep Notes -->
-                <div class="wizard-pane" id="wiz-pane-3">
-                    <h3>Your Doorstep Address & Entry Info</h3>
-                    <p class="pane-subtitle">Where should our beauty therapist arrive?</p>
-
-                    <div class="address-form-grid">
-                        <div class="form-group col-span-2">
-                            <label><i class="fa-solid fa-location-dot"></i> Street Address</label>
-                            <input type="text" id="booking-address" class="form-control"
-                                placeholder="e.g. 742 Evergreen Terrace, Apt 4B" value="1200 Sunset Blvd, Villa 4">
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-city"></i> City & State</label>
-                            <input type="text" id="booking-city" class="form-control" value="Beverly Hills, CA">
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-mail-bulk"></i> Zipcode</label>
-                            <input type="text" id="booking-zip" class="form-control" value="90210">
-                        </div>
-                        <div class="form-group col-span-2">
-                            <label><i class="fa-solid fa-key"></i> Gate Code / Doorbell / Parking Instructions</label>
-                            <input type="text" id="booking-instructions" class="form-control"
-                                placeholder="e.g. Gate code #4821, park in driveway, ring front bell">
-                        </div>
-                        <div class="form-group col-span-2">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="booking-pets-check" checked>
-                                <span>I have pets / small children (Beautician will adjust setup acoustics & cord
-                                    protectors)</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4: Summary & Instant Confirmation -->
-                <div class="wizard-pane" id="wiz-pane-4">
-                    <h3>Review & Instant Confirmation</h3>
-                    <p class="pane-subtitle">No prepayment required. Pay seamlessly after your doorstep session.</p>
-
-                    <div class="booking-review-card">
-                        <div class="review-row">
-                            <span>Selected Services:</span>
-                            <strong id="review-services-list">Signature Hair Spa + Gel Manicure</strong>
-                        </div>
-                        <div class="review-row">
-                            <span>Date & Time Slot:</span>
-                            <strong id="review-datetime">Today at 01:00 PM</strong>
-                        </div>
-                        <div class="review-row">
-                            <span>Doorstep Location:</span>
-                            <strong id="review-address">1200 Sunset Blvd, Villa 4, Beverly Hills, CA 90210</strong>
-                        </div>
-                        <div class="review-row">
-                            <span>Assigned Specialist:</span>
-                            <strong id="review-specialist">Sophia Vance (Master Artist 4.99★)</strong>
-                        </div>
-                        <div class="review-row">
-                            <span>Doorstep Travel & Kit Sterilization:</span>
-                            <strong class="text-green">FREE ($0.00)</strong>
-                        </div>
-
-                        <div class="promo-box">
-                            <input type="text" id="booking-promo-code" placeholder="Promo code (e.g. GLOW20)">
-                            <button class="btn btn-secondary" onclick="app.applyPromoCode()">Apply</button>
-                        </div>
-
-                        <div class="review-total-divider"></div>
-                        <div class="review-total-row">
-                            <span>Total Guaranteed Price:</span>
-                            <span class="review-total-price" id="review-final-price">$169.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer wizard-footer">
-                <button class="btn btn-ghost" id="wiz-prev-btn" style="display:none;"
-                    onclick="app.wizardPrev()">Back</button>
-                <div class="wizard-footer-right">
-                    <span class="wizard-subtotal">Subtotal: <strong id="wiz-subtotal-display">$0.00</strong></span>
-                    <button class="btn btn-primary" id="wiz-next-btn" onclick="app.wizardNext()">
-                        <span>Continue to Schedule</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
+          <details class="group p-6 rounded-2xl bg-white dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 open:border-[#BD5579] transition">
+            <summary class="flex justify-between items-center font-bold text-sm sm:text-base text-gray-900 dark:text-white cursor-pointer list-none">
+              <span>Are there any travel charges or doorstep convenience fees?</span>
+              <i class="fa-solid fa-plus group-open:rotate-45 text-[#BD5579] transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              Zero! All listed prices include therapist travel, disposable single-use kit costs, and post-service sanitation. What you see is exactly what you pay.
+            </p>
+          </details>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- 3. AUTHENTICATION & CLIENT PORTAL MODAL -->
-    <div class="modal-overlay" id="auth-modal">
-        <div class="modal-card auth-modal-card">
-            <div class="modal-header">
-                <div class="brand-mark">
-                    <span class="brand-title">LUXE</span>
-                    <span class="brand-sub">Client Portal</span>
-                </div>
-                <button class="modal-close-btn" onclick="app.closeModal('auth-modal')">&times;</button>
-            </div>
-
-            <div class="modal-body auth-modal-body">
-                <div class="auth-tabs">
-                    <button class="auth-tab-btn active" id="tab-login" onclick="app.switchAuthTab('login')">Sign
-                        In</button>
-                    <button class="auth-tab-btn" id="tab-signup" onclick="app.switchAuthTab('signup')">Create
-                        Account</button>
-                </div>
-
-                <div id="auth-form-container">
-                    <form id="auth-form" onsubmit="event.preventDefault(); app.handleAuthSubmit();">
-                        <div class="form-group">
-                            <label><i class="fa-regular fa-envelope"></i> Email or Mobile Number</label>
-                            <input type="text" id="auth-email" class="form-control"
-                                placeholder="e.g. sophia@example.com" value="clara.client@luxe.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-lock"></i> Password / OTP</label>
-                            <input type="password" id="auth-password" class="form-control" value="••••••••" required>
-                        </div>
-
-                        <div class="form-row auth-options">
-                            <label class="checkbox-label">
-                                <input type="checkbox" checked>
-                                <span>Remember this device</span>
-                            </label>
-                            <a href="#" class="forgot-link">Forgot password?</a>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block auth-submit-btn">
-                            <span>Sign In to Portal</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </form>
-
-                    <div class="auth-divider"><span>OR QUICK ACCESS</span></div>
-
-                    <button class="btn btn-outline btn-block" onclick="app.demoQuickLogin()">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> 1-Click Instant Demo Login
-                    </button>
-                </div>
-
-                <div id="auth-logged-in-view" style="display: none;">
-                    <div class="user-profile-header">
-                        <div class="user-avatar-large">CC</div>
-                        <div class="user-profile-info">
-                            <h4 id="profile-name">Clara Client</h4>
-                            <p id="profile-email">clara.client@luxe.com • VIP Gold Member</p>
-                            <span class="badge badge-gold"><i class="fa-solid fa-crown"></i> 450 Glow Points</span>
-                        </div>
-                    </div>
-
-                    <div class="portal-quick-grid">
-                        <div class="portal-card" onclick="app.openModal('tracker-modal')">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                            <strong>Active Appointment</strong>
-                            <span>Track Sophia Vance (En Route)</span>
-                        </div>
-                        <div class="portal-card" onclick="app.openBookingModal()">
-                            <i class="fa-solid fa-calendar-plus"></i>
-                            <strong>Book New Session</strong>
-                            <span>Schedule doorstep visit</span>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-ghost btn-block mt-3" onclick="app.logoutUser()">
-                        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
-                    </button>
-                </div>
-            </div>
+    <!-- SECTION 8: BOTTOM CTA -->
+    <section class="py-20 bg-[#141010] text-white text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
+        <span class="inline-block bg-[#BD5579] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+          READY TO GLOW?
+        </span>
+        <h2 class="font-serif-luxury text-4xl sm:text-5xl font-bold leading-tight">
+          Bring 5-Star Salon Luxury To Your Doorstep Today
+        </h2>
+        <p class="text-sm text-gray-300 max-w-lg mx-auto">
+          Book certified therapists in under 2 minutes. Receive 20% off your initial appointment with code GLOW20.
+        </p>
+        <div class="flex justify-center gap-4 flex-wrap pt-2">
+          <a href="public/pages/booking.html" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl transition">
+            Book Home Appointment
+          </a>
+          <a href="auth/user/user-dashboard.html" class="bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition">
+            Track Active Booking
+          </a>
         </div>
-    </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- 4. SERVICE DETAIL MODAL -->
-    <div class="modal-overlay" id="service-detail-modal">
-        <div class="modal-card service-modal-card">
-            <div class="modal-header">
-                <h3 id="modal-service-title">Service Details</h3>
-                <button class="modal-close-btn" onclick="app.closeModal('service-detail-modal')">&times;</button>
-            </div>
-            <div class="modal-body" id="modal-service-content">
-                <!-- Filled dynamically -->
-            </div>
-        </div>
-    </div>
+  <!-- Shared Universal Footer Placeholder -->
+  <div id="footer-container"></div>
 
-    <!-- 5. SAFETY CERTIFICATE MODAL -->
-    <div class="modal-overlay" id="safety-modal">
-        <div class="modal-card safety-modal-card">
-            <div class="modal-header">
-                <h3><i class="fa-solid fa-shield-halved text-blush"></i> Safe-Salon™ Certification Standard</h3>
-                <button class="modal-close-btn" onclick="app.closeModal('safety-modal')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="cert-modal-body">
-                    <div class="cert-badge-display">
-                        <i class="fa-solid fa-certificate"></i>
-                        <h4>ISO 22716 & SafeCare™ Certified</h4>
-                        <p>Inspection ID: <strong>LX-SAFE-2026-90210</strong> • Validated Daily</p>
-                    </div>
-                    <ul class="cert-breakdown">
-                        <li><strong>Medical Grade Autoclave:</strong> All stainless steel instruments sealed in blue
-                            surgical indicators after 120°C heat sterilization.</li>
-                        <li><strong>Monodose Guarantee:</strong> Formulations (creams, peels, serums) packaged in
-                            tamper-proof monodose tubes for single client use.</li>
-                        <li><strong>Zero Residue Policy:</strong> Complete containment of water, oils, and clippings
-                            with industrial waterproof mats and HEPA vacuums.</li>
-                        <li><strong>Therapist Accreditation:</strong> 100% certified by CIDESCO / Cosmetology State
-                            Boards with police criminal background clearance.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Notification Container -->
-    <div class="toast-container" id="toast-container"></div>
-
-    <!-- JavaScript -->
-    <script src="app.js"></script>
+  <!-- Scripts -->
+  <script src="src/js/theme.js"></script>
+  <script src="src/js/data.js"></script>
+  <script src="src/js/navbar.js"></script>
+  <script src="src/js/footer.js"></script>
+  <script src="src/js/form-validation.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couture Services Menu | ROCHELLE Doorstep Salon</title>
+  <meta name="description" content="Explore our complete catalog of doorstep beauty treatments: Hair Care, HydraFacials, Russian Gel Nails, and Bridal Couture.">
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+
+  <!-- TailwindCSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../src/js/tailwind.config.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+<body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
+
+  <div id="navbar-container"></div>
+
+  <main>
+    <!-- SECTION 1: SERVICES HERO & CONTROLS -->
+    <section class="py-20 bg-gradient-to-b from-[#EFE5DD] to-[#FAF6F4] dark:from-[#141012] dark:to-[#0F0C0D] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#BD5579] bg-pink-100 dark:bg-pink-950/60 px-3.5 py-1.5 rounded-full">
+          DOORSTEP TREATMENT MENU
+        </span>
+        <h1 class="font-serif-luxury text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+          Couture Services By Category
+        </h1>
+        <p class="text-sm text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+          Filter by category, search by product formulation, or sort by duration. Every service includes single-use monodose kits.
+        </p>
+
+        <!-- Category Tabs -->
+        <div class="flex justify-center items-center gap-2 sm:gap-3 flex-wrap pt-4">
+          <button class="service-category-tab px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-[#141010] text-white dark:bg-white dark:text-[#141010] transition shadow-sm" data-category="all">
+            <i class="fa-solid fa-layer-group mr-1.5"></i> All Services
+          </button>
+          <button class="service-category-tab px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700" data-category="hair">
+            <i class="fa-solid fa-scissors mr-1.5"></i> Hair Couture
+          </button>
+          <button class="service-category-tab px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700" data-category="skin">
+            <i class="fa-solid fa-spa mr-1.5"></i> Skin & Facials
+          </button>
+          <button class="service-category-tab px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700" data-category="nails">
+            <i class="fa-solid fa-hand-sparkles mr-1.5"></i> Nails & Pedicure
+          </button>
+          <button class="service-category-tab px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 dark:bg-zinc-800 dark:text-gray-200 hover:border-[#BD5579] transition border border-gray-200 dark:border-zinc-700" data-category="bridal">
+            <i class="fa-solid fa-crown mr-1.5"></i> Bridal & Glam
+          </button>
+        </div>
+
+        <!-- Search and Sort Bar -->
+        <div class="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 pt-2">
+          <div class="relative flex-grow">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" id="services-search-input" placeholder="Search treatments (e.g. Keratin, HydraGlow, Gel Nails, Bridal)..." class="w-full pl-11 pr-4 py-3.5 rounded-full bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs sm:text-sm focus:outline-none focus:border-[#BD5579] shadow-sm">
+          </div>
+          <select id="services-sort-select" class="px-5 py-3.5 rounded-full bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs font-bold text-gray-700 dark:text-gray-200 focus:outline-none">
+            <option value="popular">Most Popular</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DYNAMIC SERVICES GRID -->
+    <section class="py-16 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid-container">
+          <!-- Populated dynamically by services.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHAT'S INCLUDED IN EVERY HOME SESSION -->
+    <section class="py-20 bg-white dark:bg-[#141012] border-y border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="inline-block text-xs font-bold tracking-widest text-[#BD5579] uppercase bg-pink-100 dark:bg-pink-950/60 px-3 py-1 rounded-full">STANDARD ON ALL VISITS</span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">The Rochelle Doorstep Setup Guarantee</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] text-center space-y-2 border border-gray-200 dark:border-zinc-800">
+            <i class="fa-solid fa-lightbulb text-2xl text-[#BD5579]"></i>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-gray-900 dark:text-white">Studio Vanity Lighting</h4>
+            <p class="text-[11px] text-gray-500">Daylight ring-lights & illuminated mirrors brought to any room.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] text-center space-y-2 border border-gray-200 dark:border-zinc-800">
+            <i class="fa-solid fa-rug text-2xl text-[#BD5579]"></i>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-gray-900 dark:text-white">Waterproof Drapes</h4>
+            <p class="text-[11px] text-gray-500">Floor and furniture drop-cloths protect all living room surfaces.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] text-center space-y-2 border border-gray-200 dark:border-zinc-800">
+            <i class="fa-solid fa-box-open text-2xl text-[#BD5579]"></i>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-gray-900 dark:text-white">Sealed Monodose Kits</h4>
+            <p class="text-[11px] text-gray-500">Single-use ampoules opened strictly in front of the client.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] text-center space-y-2 border border-gray-200 dark:border-zinc-800">
+            <i class="fa-solid fa-broom text-2xl text-[#BD5579]"></i>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-gray-900 dark:text-white">Spotless Clean-Up</h4>
+            <p class="text-[11px] text-gray-500">Cordless HEPA vacuuming and sealed bio-friendly disposal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CUSTOM GROUP BOOKING BANNER -->
+    <section class="py-16 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-[#141010] to-[#25181C] text-white p-8 sm:p-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+          <div class="space-y-2 max-w-xl">
+            <span class="text-xs font-bold text-[#BD5579] uppercase tracking-widest">GROUP & EVENT GLAM</span>
+            <h3 class="font-serif-luxury text-3xl sm:text-4xl font-bold">Planning a Bachelorette or Home Spa Party?</h3>
+            <p class="text-xs sm:text-sm text-gray-300">We dispatch multi-artist squads with simultaneous treatment timelines for private celebrations.</p>
+          </div>
+          <a href="../../public/pages/contact.html" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition flex-shrink-0 shadow-lg">
+            Customize Group Event
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SERVICES FAQ -->
+    <section class="py-20 bg-white dark:bg-[#141012] border-t border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Common Questions About Our Services</h2>
+        <div class="space-y-4 text-left">
+          <details class="p-5 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 open:border-[#BD5579]">
+            <summary class="font-bold text-xs sm:text-sm cursor-pointer list-none flex justify-between items-center text-gray-900 dark:text-white">
+              <span>Can I book multiple services in a single visit?</span>
+              <i class="fa-solid fa-plus text-[#BD5579]"></i>
+            </summary>
+            <p class="mt-3 text-xs text-gray-500 leading-relaxed">Yes! You can bundle Hair, Facial, and Mani-Pedi in one session. Our booking engine automatically schedules a unified time window.</p>
+          </details>
+          <details class="p-5 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 open:border-[#BD5579]">
+            <summary class="font-bold text-xs sm:text-sm cursor-pointer list-none flex justify-between items-center text-gray-900 dark:text-white">
+              <span>Are genuine brand products used?</span>
+              <i class="fa-solid fa-plus text-[#BD5579]"></i>
+            </summary>
+            <p class="mt-3 text-xs text-gray-500 leading-relaxed">100% authentic formulations sourced directly from L'Oréal Professionnel, Kérastase, OPI, and O3+ Derma Pro.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../../src/js/theme.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/services.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+</body>
+</html>

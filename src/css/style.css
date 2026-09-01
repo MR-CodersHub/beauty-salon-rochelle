@@ -1,0 +1,142 @@
+/* ==========================================================================
+   ROCHELLE AT-HOME | Master Stylesheet
+   TailwindCSS Enhancements • Custom Design Tokens • Animations • Dark & RTL
+   ========================================================================== */
+
+:root {
+  --color-primary: #BD5579;
+  --color-primary-hover: #A33F62;
+  --color-primary-light: #FCEEF3;
+  --color-noir: #141010;
+  --color-gold: #C69B7B;
+  --color-porcelain: #FAF6F4;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Anton', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: #BD5579;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A33F62;
+}
+
+/* Font Classes */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+.font-display-impact {
+  font-family: var(--font-display);
+}
+.font-sans-clean,
+.font-number,
+.font-sans-number {
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rotating Trending Stamp */
+.rotating-badge-svg {
+  animation: spinBadge 18s linear infinite;
+}
+@keyframes spinBadge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Live Map Radar Pulse */
+.radar-pulse {
+  animation: radarPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes radarPing {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Route Line Dashed Movement */
+.route-dashed-line {
+  stroke-dasharray: 8 6;
+  animation: dashMove 25s linear infinite;
+}
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Floating Card Animation */
+.floating-element {
+  animation: floatSmooth 4s ease-in-out infinite;
+}
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* RTL Specific Overrides */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .rtl-mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Dark Mode Overrides */
+.dark body {
+  background-color: #0F0C0D;
+  color: #F3ECEE;
+}
+.dark .dark-card {
+  background-color: #1A1517;
+  border-color: #2D2326;
+}
+.dark .dark-input {
+  background-color: #241C1F;
+  border-color: #382C30;
+  color: #F3ECEE;
+}
+
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+[dir="rtl"] #toast-container {
+  right: auto;
+  left: 24px;
+}
+.toast-msg {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 450px;
+  animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

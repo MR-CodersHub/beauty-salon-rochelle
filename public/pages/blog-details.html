@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article | ROCHELLE Beauty Journal</title>
+  <meta name="description" content="Read full beauty dossiers, treatment comparisons, and doorstep salon insights from certified master therapists.">
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+
+  <!-- TailwindCSS CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../src/js/tailwind.config.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+<body class="bg-[#FAF6F4] text-[#1D1818] dark:bg-[#0F0C0D] dark:text-[#F3ECEE] transition-colors duration-300 font-sans-clean">
+
+  <div id="navbar-container"></div>
+
+  <main>
+    <!-- SECTION 1: BREADCRUMB -->
+    <section class="py-8 bg-white dark:bg-[#141012] border-b border-gray-200 dark:border-zinc-800 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center gap-2 text-xs text-gray-500">
+          <a href="../../index.html" class="hover:text-[#BD5579] transition">Home</a>
+          <span>/</span>
+          <a href="../../public/pages/blog.html" class="hover:text-[#BD5579] transition">Beauty Journal</a>
+          <span>/</span>
+          <span class="font-bold text-gray-900 dark:text-white" id="blog-breadcrumb-title">Article</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DYNAMIC ARTICLE & SIDEBAR (Injected by blog.js) -->
+    <section class="py-16 bg-[#FAF6F4] dark:bg-[#0F0C0D] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="blog-detail-view">
+        <!-- Rendered dynamically by blog.js based on ?id= query param -->
+      </div>
+    </section>
+
+    <!-- SECTION 3: COMMENTS & COMMUNITY FEEDBACK -->
+    <section class="py-16 bg-white dark:bg-[#141012] border-t border-gray-100 dark:border-zinc-800 transition-colors">
+      <div class="max-w-4xl mx-auto px-4 space-y-8">
+        <h3 class="font-serif-luxury text-3xl font-bold text-gray-900 dark:text-white">Reader Discussions (3 Comments)</h3>
+        
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <strong class="text-gray-900 dark:text-white">Caroline Vance</strong>
+              <span class="text-gray-400">2 days ago</span>
+            </div>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              "This completely changed my perspective on home keratin treatments. Having the stylist bring the micro-mist cap made all the difference!"
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#FAF6F4] dark:bg-[#1A1517] border border-gray-200 dark:border-zinc-800 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <strong class="text-gray-900 dark:text-white">Maya K.</strong>
+              <span class="text-gray-400">4 days ago</span>
+            </div>
+            <p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+              "The single-use monodose packaging is what convinced me to switch from my regular Beverly Hills salon. So much cleaner."
+            </p>
+          </div>
+        </div>
+
+        <!-- Add Comment Form -->
+        <div class="pt-6 border-t border-gray-200 dark:border-zinc-800 space-y-4">
+          <h4 class="font-bold text-sm text-gray-900 dark:text-white">Leave a Response</h4>
+          <form onsubmit="event.preventDefault(); window.showToast('Thank you! Your comment has been submitted for moderation.'); this.reset();" class="space-y-3">
+            <textarea required rows="3" placeholder="Join the discussion..." class="w-full p-4 rounded-2xl bg-[#FAF6F4] dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-xs focus:outline-none focus:border-[#BD5579]"></textarea>
+            <button type="submit" class="bg-[#BD5579] hover:bg-[#A33F62] text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
+              Post Comment
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: NEWSLETTER & BACK CTA -->
+    <section class="py-16 bg-[#FAF6F4] dark:bg-[#0F0C0D] text-center space-y-4">
+      <h3 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Enjoyed This Article?</h3>
+      <p class="text-xs text-gray-500">Explore more expert beauty guides in our curated journal.</p>
+      <a href="../../public/pages/blog.html" class="inline-block bg-[#141010] dark:bg-white text-white dark:text-[#141010] px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#BD5579] transition">
+        Browse All Articles
+      </a>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../../src/js/theme.js"></script>
+  <script src="../../src/js/data.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script src="../../src/js/blog.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+</body>
+</html>
